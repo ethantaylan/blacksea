@@ -1,0 +1,162 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color:black;
+}
+
+.ETHANTAYLAN {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    white-space: wrap;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.slogan {
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 66px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 25px black;
+    border-bottom: solid 2px transparent;
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+}
+
+.body-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("/bgfaded.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: auto;
+}
+
+nav {
+    font-family: calibri;
+    font-weight: 500;
+    font-size: 18px;
+    text-shadow: 0 0 20px black;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: 1px;
+}
+
+.portfolio-un,
+.portfolio-deux,
+.portfolio-trois {
+    object-fit: contain;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio {
+    background-color: dimgray;
+    text-decoration: none;
+}
+nav a {
+    padding: 15px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom-color: white;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+footer {
+    height: 4%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: black;
+}
+
+.fa-facebook-square,
+.fa-instagram-square,
+.fa-share-square {
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 0 20px black;
+}
+.home {
+    text-decoration: none;
+}
+.set-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 5%;
+    align-items: center;
+}
+.block-portfolio {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+}
+.box-portfolio {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.box-int-portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:   black;
+    justify-content: center;
+    border-radius: 20px;
+}
+.texte-portfolio-un {
+    padding: 30px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.bodytwo {
+    width: 100%;
+    height: 100%;
+}
+.fa-facebook-square:hover {
+    transform:scale(1.1)
+}
+
+.fa-instagram-square:hover {
+    transform:scale(1.1)
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+}
