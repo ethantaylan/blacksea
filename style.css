@@ -1,0 +1,91 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-plus-slogan {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.slogan {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform : uppercase;
+}
+
+.logo-blacksea {
+object-fit: none;
+}
+
+.body-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    text-align: center;
+    font-family: calibri;
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 40px;
+    text-shadow: 0 0 20px black;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    letter-spacing: 8px;
+}
+
+nav a {
+    padding: 30px;
+    border-bottom: 4px solid transparent;
+}
+
+nav a:hover {
+    border-bottom-color: white;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+footer {
+    height: 7%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: black;
+}
+
+.fa-facebook-square,
+.fa-instagram-square,
+.fa-share-square {
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 0 20px black;
+}
+
+.set-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 5%;
+    align-items: center;
+}
