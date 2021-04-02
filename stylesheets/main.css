@@ -1,0 +1,65 @@
+/* line 1, ../sass/main.sass */
+body {
+  margin: 0;
+  background-color: black;
+  font-family: Calibri, sans-serif;
+}
+/* line 5, ../sass/main.sass */
+body header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  height: 50px;
+}
+/* line 11, ../sass/main.sass */
+body .logo-bs {
+  object-fit: contain;
+  margin-left: 10px;
+  width: 160px;
+}
+/* line 15, ../sass/main.sass */
+body .navigation {
+  font-family: Calibri, sans-serif;
+  font-size: 20px;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+/* line 23, ../sass/main.sass */
+body .navigation ol {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+}
+
+/* line 31, ../sass/main.sass */
+.block-int {
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../ressources/bg.jpg");
+  position: relative;
+}
+/* line 38, ../sass/main.sass */
+.block-int .slogan {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  width: 400px;
+  flex-wrap: wrap;
+}
+/* line 46, ../sass/main.sass */
+.block-int .slogan .sig {
+  color: #69e1ff;
+  font-style: italic;
+  font-weight: bold;
+}
