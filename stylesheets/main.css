@@ -13,48 +13,38 @@ html header, body header {
   align-items: center;
   height: 50px;
   background-color: black;
+  justify-content: space-between;
 }
-/* line 16, ../sass/main.sass */
-html .logo-bs, body .logo-bs {
+/* line 17, ../sass/main.sass */
+html header .logo-bs, body header .logo-bs {
   object-fit: contain;
   margin-left: 10px;
-  width: 201px;
+  width: 200px;
+  height: 31px;
   cursor: pointer;
 }
-/* line 21, ../sass/main.sass */
-html .navigation, body .navigation {
+/* line 23, ../sass/main.sass */
+html header .navigation, body header .navigation {
   font-family: Calibri, sans-serif;
   font-size: 20px;
   color: white;
-  width: 83%;
+  width: 50%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
-/* line 28, ../sass/main.sass */
-html .navigation ol, body .navigation ol {
-  width: 40%;
+/* line 30, ../sass/main.sass */
+html header .navigation ol, body header .navigation ol {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
   transition: 1s;
-  /*.home:hover ~ .line-home
-   * opacity: 1
-   * width: 105px
-   * transition: opacity 0.6s, width 0.6s */
-  /*.line
-   * width: 0px
-   * height: 2px
-   * background-color: $turquoise
-   * opacity: 0
-   * position: absolute
-   * top: 40px
-   * transition: 1s */
 }
-/* line 37, ../sass/main.sass */
-html .navigation ol li, body .navigation ol li {
+/* line 39, ../sass/main.sass */
+html header .navigation ol li, body header .navigation ol li {
   border: hidden;
   display: flex;
   align-items: center;
@@ -69,38 +59,38 @@ html .navigation ol li, body .navigation ol li {
   border: 0px solid #4be6cd;
   cursor: pointer;
 }
-/* line 51, ../sass/main.sass */
-html .navigation ol li:hover, body .navigation ol li:hover {
+/* line 53, ../sass/main.sass */
+html header .navigation ol li:hover, body header .navigation ol li:hover {
   border: 1px solid #4be6cd;
   padding: 1px;
 }
-/* line 54, ../sass/main.sass */
-html .navigation ol .btn-nav, body .navigation ol .btn-nav {
+/* line 56, ../sass/main.sass */
+html header .navigation ol li .btn-nav, body header .navigation ol li .btn-nav {
   justify-content: center;
-  justify-content-border-style: none;
-  justify-content-background-color: unset;
-  justify-content-color: white;
-  justify-content-font-family: Calibri, sans-serif;
-  justify-content-font-size: 18px;
-  justify-content-margin: 0;
-  justify-content-cursor: pointer;
-  justify-content-width: 100%;
-  justify-content-text-align: center;
-  justify-content-height: 30px;
-  justify-content-align-items: center;
-  justify-content-display: flex;
+  border-style: none;
+  background-color: unset;
+  color: white;
+  font-family: Calibri, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  align-items: center;
+  display: flex;
 }
-/* line 68, ../sass/main.sass */
-html .navigation ol .btn-nav:active, body .navigation ol .btn-nav:active {
+/* line 70, ../sass/main.sass */
+html header .navigation ol li:active, body header .navigation ol li:active {
   transform: scale(1.1);
   color: #4be6cd;
   border: none;
 }
-/* line 72, ../sass/main.sass */
-html .navigation ol .btn-nav:hover, body .navigation ol .btn-nav:hover {
+/* line 74, ../sass/main.sass */
+html header .navigation ol li:hover, body header .navigation ol li:hover {
   color: white;
 }
-/* line 87, ../sass/main.sass */
+/* line 76, ../sass/main.sass */
 html .block-int, body .block-int {
   width: 100%;
   height: 100%;
@@ -108,7 +98,7 @@ html .block-int, body .block-int {
   display: flex;
   flex-direction: row;
 }
-/* line 93, ../sass/main.sass */
+/* line 82, ../sass/main.sass */
 html .block-int .slogan, body .block-int .slogan {
   color: black;
   font-size: 70px;
@@ -120,11 +110,11 @@ html .block-int .slogan, body .block-int .slogan {
   font-family: Mermaid, sans-serif;
   z-index: 999;
 }
-/* line 103, ../sass/main.sass */
+/* line 92, ../sass/main.sass */
 html .block-int .slogan .sig, body .block-int .slogan .sig {
   color: #4be6cd;
 }
-/* line 105, ../sass/main.sass */
+/* line 94, ../sass/main.sass */
 html .block-int .imghome, body .block-int .imghome {
   width: 65%;
   position: absolute;
@@ -134,11 +124,11 @@ html .block-int .imghome, body .block-int .imghome {
   transition: 0.5s;
   box-shadow: 10px 10px 15px rgba(150, 150, 150, 0.582);
 }
-/* line 113, ../sass/main.sass */
+/* line 102, ../sass/main.sass */
 html .block-int .imghome:hover, body .block-int .imghome:hover {
   width: 70%;
 }
-/* line 115, ../sass/main.sass */
+/* line 104, ../sass/main.sass */
 html .block-int .coding, body .block-int .coding {
   object-fit: scale-down;
   position: absolute;
@@ -146,7 +136,7 @@ html .block-int .coding, body .block-int .coding {
   left: 15%;
   z-index: 999;
 }
-/* line 121, ../sass/main.sass */
+/* line 110, ../sass/main.sass */
 html footer, body footer {
   display: flex;
   justify-content: center;
@@ -158,7 +148,7 @@ html footer, body footer {
   bottom: 0%;
   color: white;
 }
-/* line 131, ../sass/main.sass */
+/* line 120, ../sass/main.sass */
 html footer .footer-list, body footer .footer-list {
   list-style-type: none;
   font-family: S, sans sans-serif;
@@ -167,14 +157,14 @@ html footer .footer-list, body footer .footer-list {
   width: 20%;
   justify-content: space-between;
 }
-/* line 138, ../sass/main.sass */
+/* line 127, ../sass/main.sass */
 html footer .footer-list .footer-icons, body footer .footer-list .footer-icons {
   width: 20px;
   height: 20px;
   object-fit: contain;
   padding: 6px;
 }
-/* line 143, ../sass/main.sass */
+/* line 132, ../sass/main.sass */
 html footer .footer-list .footer-icons:hover, body footer .footer-list .footer-icons:hover {
   padding: 5px;
   border: 1px solid #4be6cd;
