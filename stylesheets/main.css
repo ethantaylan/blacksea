@@ -1,65 +1,135 @@
-/* line 1, ../sass/main.sass */
-body {
+@import url(./ressources/Mermaid);
+/* line 3, ../sass/main.sass */
+html, body {
   margin: 0;
-  background-color: black;
-  font-family: Calibri, sans-serif;
+  height: 100%;
 }
-/* line 5, ../sass/main.sass */
-body header {
+/* line 6, ../sass/main.sass */
+html header, body header {
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
   height: 50px;
+  background-color: black;
 }
-/* line 11, ../sass/main.sass */
-body .logo-bs {
+/* line 13, ../sass/main.sass */
+html .logo-bs, body .logo-bs {
   object-fit: contain;
   margin-left: 10px;
-  width: 160px;
+  width: 201px;
+  cursor: pointer;
 }
-/* line 15, ../sass/main.sass */
-body .navigation {
+/* line 18, ../sass/main.sass */
+html .navigation, body .navigation {
   font-family: Calibri, sans-serif;
   font-size: 20px;
   color: white;
-  width: 100%;
+  width: 83%;
   display: flex;
   justify-content: flex-end;
-  margin-right: 10px;
 }
-/* line 23, ../sass/main.sass */
-body .navigation ol {
+/* line 25, ../sass/main.sass */
+html .navigation ol, body .navigation ol {
   display: flex;
   flex-direction: row;
-  width: 50%;
-  justify-content: space-between;
+  width: 40%;
+  justify-content: space-around;
   list-style-type: none;
   margin: 0;
+  padding: 0;
+  transition: 2s;
 }
-
-/* line 31, ../sass/main.sass */
-.block-int {
-  width: 100%;
-  height: 600px;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../ressources/bg.jpg");
+/* line 34, ../sass/main.sass */
+html .navigation ol li, body .navigation ol li {
+  height: 51px;
+  border: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 }
-/* line 38, ../sass/main.sass */
-.block-int .slogan {
+/* line 42, ../sass/main.sass */
+html .navigation ol .btn-nav, body .navigation ol .btn-nav {
+  border-style: none;
+  background-color: unset;
   color: white;
-  font-size: 50px;
-  position: absolute;
-  bottom: 100px;
-  left: 80px;
-  width: 400px;
-  flex-wrap: wrap;
+  font-family: Calibri, sans-serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
-/* line 46, ../sass/main.sass */
+/* line 51, ../sass/main.sass */
+html .navigation ol .btn-nav:active, body .navigation ol .btn-nav:active {
+  transform: scale(1.1);
+  color: #4be6cd;
+  border: none;
+}
+/* line 55, ../sass/main.sass */
+html .navigation ol .home:hover ~ .line-home, body .navigation ol .home:hover ~ .line-home {
+  opacity: 1;
+  width: 105px;
+  transition: opacity 0.6s, width 0.6s;
+}
+/* line 59, ../sass/main.sass */
+html .navigation ol .line, body .navigation ol .line {
+  width: 0px;
+  height: 2px;
+  background-color: #4be6cd;
+  opacity: 0;
+  position: absolute;
+  top: 48px;
+  transition: 1s;
+}
+
+/* line 68, ../sass/main.sass */
+.block-int {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+/* line 74, ../sass/main.sass */
+.block-int .slogan {
+  color: black;
+  font-size: 349%;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  width: 350px;
+  flex-wrap: wrap;
+  font-family: Mermaid, sans-serif;
+  z-index: 999;
+}
+/* line 84, ../sass/main.sass */
 .block-int .slogan .sig {
-  color: #69e1ff;
-  font-style: italic;
-  font-weight: bold;
+  color: #4be6cd;
+}
+/* line 86, ../sass/main.sass */
+.block-int .imghome {
+  width: 65%;
+  position: absolute;
+  object-fit: cover;
+  right: 4%;
+  bottom: 16.5%;
+  transition: 2s;
+}
+/* line 93, ../sass/main.sass */
+.block-int .imghome:hover {
+  padding-bottom: 20px;
+  padding-right: 20px;
+  transition: padding-bottom 0.5s, padding-right 1s, width 2s;
+  width: 70%;
+}
+/* line 98, ../sass/main.sass */
+.block-int .coding {
+  width: 197px;
+  height: 97px;
+  position: absolute;
+  bottom: 39%;
+  left: 15%;
+  z-index: 999;
 }
