@@ -4,24 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/stylesheets/main.css" rel="stylesheet">
-    <title>Blacksea - Acceuil</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script src="https://kit.fontawesome.com/d0c24f2ffe.js" crossorigin="anonymous"></script>
+    <title>blacksea</title>
 </head>
 <body>
     <header>
-        <img class="logo-bs" src="ressources/logo-bs.png" alt="">
-        <nav class="navigation">
-            <ol>
-                <li>HOME</li>
-                <li><strong>PORTFOLIO</strong></li>
-                <li>SERVICES</li>
-                <li>CV</li>
-                <li>CONTACT</li>
+        <nav>
+            <nav>
+                <ol class="left-nav">
+                    <li class="social"><i class="fab fa-facebook"></i>
+                    <li class="social"><i class="fab fa-twitter"></i>
+                    <li class="social"><i class="fab fa-github"></i>
+                    <li class="social"><i class="fab fa-linkedin"></i>
+                    <li class="social"><i class="fab fa-instagram"></i>
+                </ol>
+            </nav>
+            <ol class="right-nav">
+                <li class="">home</li>
+                <li class=""><a href="#portfolio">PORTFOLIO</a></li>
+                <li class="">cv</li>
+                <li class="">contact</li>
             </ol>
         </nav>
     </header>
-    <div class="block-int">
-        <p class="slogan">MAKE IT SIMPLE BUT <span class="sig">SIGNIFICANT</span></p>
+    <section>
+        <div class="center-div">
+            <img src="/ressources/me.jpeg" alt="" class="photo">
+                <div class="only-texte">
+                    <p class="me">Ethan Taylan</p>
+                    <p class="webdesign">Développeur web font-end</p>
+                </div>
+        </div>
+    </section>
+    <div class="bloc-portfolio">
+        <div class="titre">
+            <i class="fas fa-folder-open folder-icon"></i>
+            <h1 id="portfolio">PORTFOLIO</h1>
+        </div>
+        <div class="box-portfolio">
+            <div class="left-box">
+                <img class="portfolio-img-style" src="/ressources/reservia.jpg" alt="">
+            </div>
+            <div class="right-box">
+                <h2 class="titre-right-box">RESERVIA</h2>
+                <h3 class="sous-titre-box">
+                    Premier projet réaliser sans framework en utilisant les langages HTML et CSS
+                </h3>
+            </div>
+        </div>
+        <div class="box-portfolio">
+            <div class="left-box">
+                <img class="portfolio-img-style" src="/ressources/reservia.jpg" alt="">
+            </div>
+            <div class="right-box">
+                <h2 class="titre-right-box">RESERVIA</h2>
+                <h3 class="sous-titre-box">
+                    Premier projet réaliser sans framework en utilisant les langages HTML et CSS
+                </h3>
+            </div>
+        </div>
+        <div class="box-portfolio">
+            <div class="left-box">
+                <img class="portfolio-img-style" src="/ressources/reservia.jpg" alt="">
+            </div>
+            <div class="right-box">
+                <h2 class="titre-right-box">RESERVIA</h2>
+                <h3 class="sous-titre-box">
+                    Premier projet réaliser sans framework en utilisant les langages HTML et CSS
+                </h3>
+            </div>
+        </div>
     </div>
 </body>
 </html>

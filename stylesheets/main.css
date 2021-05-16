@@ -1,65 +1,217 @@
-/* line 1, ../sass/main.sass */
-body {
+/* line 3, ../sass/main.sass */
+html, body {
   margin: 0;
-  background-color: black;
-  font-family: Calibri, sans-serif;
-}
-/* line 5, ../sass/main.sass */
-body header {
-  display: flex;
-  flex-direction: row;
+  background-color: #0a0a0a;
+  background-image: url("/ressources/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+/* line 14, ../sass/main.sass */
+html section, body section {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  height: 50px;
 }
-/* line 11, ../sass/main.sass */
-body .logo-bs {
-  object-fit: contain;
-  margin-left: 10px;
-  width: 160px;
-}
-/* line 15, ../sass/main.sass */
-body .navigation {
-  font-family: Calibri, sans-serif;
-  font-size: 20px;
-  color: white;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
-}
-/* line 23, ../sass/main.sass */
-body .navigation ol {
+/* line 20, ../sass/main.sass */
+html section .center-div, body section .center-div {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+/* line 25, ../sass/main.sass */
+html section .center-div .photo, body section .center-div .photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  image-rendering: high-quality;
+  border-radius: 100%;
+  margin-right: 40px;
+  border: 2px solid #ff006a;
+}
+/* line 33, ../sass/main.sass */
+html section .center-div .me, body section .center-div .me {
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+/* line 39, ../sass/main.sass */
+html section .center-div .webdesign, body section .center-div .webdesign {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  color: #ff006a;
+}
+
+/* line 49, ../sass/main.sass */
+header {
+  padding-bottom: 2px;
+}
+
+/* line 51, ../sass/main.sass */
+nav {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  width: 100%;
+}
+/* line 59, ../sass/main.sass */
+nav .left-nav {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 10px;
+  color: #c8c8c8;
+  padding-right: 20px;
+}
+/* line 73, ../sass/main.sass */
+nav .left-nav .social {
+  margin: 10px;
+}
+/* line 75, ../sass/main.sass */
+nav .left-nav .social:hover {
+  color: #ff006a;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: 0.4s;
+}
+/* line 80, ../sass/main.sass */
+nav .right-nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+/* line 90, ../sass/main.sass */
+nav .right-nav li {
+  margin: 10px;
+}
+/* line 92, ../sass/main.sass */
+nav .right-nav li:hover {
+  color: #ff006a;
+  cursor: pointer;
+}
+
+/* line 96, ../sass/main.sass */
+.bloc-portfolio {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 104, ../sass/main.sass */
+.bloc-portfolio .titre {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  align-self: flex-start;
+  margin-top: 40px;
+}
+/* line 112, ../sass/main.sass */
+.bloc-portfolio .titre .folder-icon {
+  font-size: 18px;
+  color: #ff006a;
+  border: 2px solid #ff006a;
+  border-radius: 100%;
+  padding: 10px;
+}
+/* line 118, ../sass/main.sass */
+.bloc-portfolio #portfolio {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  margin-left: 30px;
+  letter-spacing: 2px;
+}
+
+/* line 124, ../sass/main.sass */
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* line 128, ../sass/main.sass */
+.box-portfolio {
+  height: 100%;
+  width: 77%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+/* line 135, ../sass/main.sass */
+.box-portfolio .left-box {
+  height: 70%;
+}
+/* line 137, ../sass/main.sass */
+.box-portfolio .right-box {
+  height: 70%;
+}
+/* line 139, ../sass/main.sass */
+.box-portfolio .right-box .titre-right-box {
+  color: #ff006a;
+  font-size: 33px;
+  margin: 0;
+}
+/* line 143, ../sass/main.sass */
+.box-portfolio .right-box .sous-titre-box {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
   margin: 0;
 }
 
-/* line 31, ../sass/main.sass */
-.block-int {
+/* line 151, ../sass/main.sass */
+.portfolio-img-style {
+  border-radius: 5px;
+  border: 2px solid #ff006a;
+  filter: saturate(0);
   width: 100%;
-  height: 600px;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../ressources/bg.jpg");
-  position: relative;
+  object-fit: cover;
+  height: 100%;
 }
-/* line 38, ../sass/main.sass */
-.block-int .slogan {
-  color: white;
-  font-size: 50px;
-  position: absolute;
-  bottom: 100px;
-  left: 80px;
-  width: 400px;
-  flex-wrap: wrap;
+/* line 158, ../sass/main.sass */
+.portfolio-img-style:hover {
+  filter: saturate(1);
+  transition: 0.4s;
+  cursor: pointer;
 }
-/* line 46, ../sass/main.sass */
-.block-int .slogan .sig {
-  color: #69e1ff;
-  font-style: italic;
-  font-weight: bold;
+
+/* line 163, ../sass/main.sass */
+.number {
+  color: #ff006a;
 }
