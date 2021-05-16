@@ -1,0 +1,36 @@
+
+@media screen and (max-width: 1024px)  
+header
+    height: 100px !important
+    flex-direction: column !important
+    transition: 2
+    background-color: red !important
+    
+.navigation
+    width: 100% !important
+    margin-bottom: 10px !important
+    display: flex !important
+
+.imghome
+    position: unset !important
+    width: 100% !important
+    height: 100% !important
+    object-fit: cover !important
+
+.slogan
+    flex-wrap: nowrap !important
+    white-space: nowrap !important
+    width: 100px !important
+
+.coding
+    display: none
+
+.sig
+    flex-wrap: nowrap !important
+    white-space: nowrap !important
+    border: 1px solid black !important
+
+.logo-bs
+    margin-top: 10px !important
+    margin-bottom: 20px !important
+    margin-left: 0px !important

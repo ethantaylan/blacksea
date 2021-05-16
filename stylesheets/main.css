@@ -139,9 +139,8 @@ nav .right-nav li:hover {
   align-items: center;
   width: 40%;
   align-self: flex-start;
-  margin-top: 40px;
 }
-/* line 112, ../sass/main.sass */
+/* line 111, ../sass/main.sass */
 .bloc-portfolio .titre .folder-icon {
   font-size: 18px;
   color: #ff006a;
@@ -149,7 +148,7 @@ nav .right-nav li:hover {
   border-radius: 100%;
   padding: 10px;
 }
-/* line 118, ../sass/main.sass */
+/* line 117, ../sass/main.sass */
 .bloc-portfolio #portfolio {
   color: white;
   font-weight: 500;
@@ -158,13 +157,13 @@ nav .right-nav li:hover {
   letter-spacing: 2px;
 }
 
-/* line 124, ../sass/main.sass */
+/* line 123, ../sass/main.sass */
 a {
   text-decoration: none;
   color: unset;
 }
 
-/* line 128, ../sass/main.sass */
+/* line 127, ../sass/main.sass */
 .box-portfolio {
   height: 100%;
   width: 77%;
@@ -173,21 +172,21 @@ a {
   justify-content: space-around;
   align-items: center;
 }
-/* line 135, ../sass/main.sass */
+/* line 134, ../sass/main.sass */
 .box-portfolio .left-box {
   height: 70%;
 }
-/* line 137, ../sass/main.sass */
+/* line 136, ../sass/main.sass */
 .box-portfolio .right-box {
   height: 70%;
 }
-/* line 139, ../sass/main.sass */
+/* line 138, ../sass/main.sass */
 .box-portfolio .right-box .titre-right-box {
   color: #ff006a;
   font-size: 33px;
   margin: 0;
 }
-/* line 143, ../sass/main.sass */
+/* line 142, ../sass/main.sass */
 .box-portfolio .right-box .sous-titre-box {
   color: white;
   font-size: 16px;
@@ -195,7 +194,7 @@ a {
   margin: 0;
 }
 
-/* line 151, ../sass/main.sass */
+/* line 150, ../sass/main.sass */
 .portfolio-img-style {
   border-radius: 5px;
   border: 2px solid #ff006a;
@@ -204,14 +203,14 @@ a {
   object-fit: cover;
   height: 100%;
 }
-/* line 158, ../sass/main.sass */
+/* line 157, ../sass/main.sass */
 .portfolio-img-style:hover {
   filter: saturate(1);
   transition: 0.4s;
   cursor: pointer;
 }
 
-/* line 163, ../sass/main.sass */
+/* line 162, ../sass/main.sass */
 .number {
   color: #ff006a;
 }
