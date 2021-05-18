@@ -9,6 +9,7 @@ html, body
     background-repeat: no-repeat
     width: 100%
     height: 100%
+    scroll-behavior: smooth
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     body
         position: relative        
@@ -69,7 +70,7 @@ nav
         font-size: 16px
         border-bottom: 1px solid rgba(200, 200, 200, 1)
         padding-bottom: 10px
-        color: rgba(200, 200, 200, 1)
+        color: white
         padding-right: 20px
         .social
             margin: 10px
@@ -90,9 +91,10 @@ nav
         font-size: 14px
         li
             margin: 10px
-        li:hover
-            color: $rougeViolet
-            cursor: pointer
+            &:hover
+                color: $rougeViolet
+                cursor: pointer
+                transition: 0.4s
 
 .bloc-portfolio
     width: 100%
@@ -171,7 +173,6 @@ a
             cursor: pointer
             padding-left: 10px
             transition: 0.8s
-    .number
 
 .barre
     display: flex
@@ -194,3 +195,11 @@ a
     height: 35px
     width: 35px
     text-align: center
+
+.icons-used
+    width: 25px
+    height: 25px
+
+.txt-html
+    color: $rougeViolet
+    font-size: 10px

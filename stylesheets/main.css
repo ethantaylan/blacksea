@@ -8,13 +8,14 @@ html, body {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-/* line 13, ../sass/main.sass */
+/* line 14, ../sass/main.sass */
 html body, body body {
   position: relative;
 }
-/* line 15, ../sass/main.sass */
+/* line 16, ../sass/main.sass */
 html section, body section {
   height: 450px;
   width: 100%;
@@ -22,14 +23,14 @@ html section, body section {
   justify-content: center;
   align-items: center;
 }
-/* line 21, ../sass/main.sass */
+/* line 22, ../sass/main.sass */
 html section .center-div, body section .center-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-/* line 26, ../sass/main.sass */
+/* line 27, ../sass/main.sass */
 html section .center-div .photo, body section .center-div .photo {
   width: 120px;
   height: 120px;
@@ -39,7 +40,7 @@ html section .center-div .photo, body section .center-div .photo {
   margin-right: 40px;
   border: 2px solid #ff006a;
 }
-/* line 34, ../sass/main.sass */
+/* line 35, ../sass/main.sass */
 html section .center-div .me, body section .center-div .me {
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -47,7 +48,7 @@ html section .center-div .me, body section .center-div .me {
   font-weight: 700;
   margin: 0;
 }
-/* line 40, ../sass/main.sass */
+/* line 41, ../sass/main.sass */
 html section .center-div .webdesign, body section .center-div .webdesign {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
@@ -60,12 +61,12 @@ html section .center-div .webdesign, body section .center-div .webdesign {
   color: #ff006a;
 }
 
-/* line 50, ../sass/main.sass */
+/* line 51, ../sass/main.sass */
 header {
   padding-bottom: 2px;
 }
 
-/* line 52, ../sass/main.sass */
+/* line 53, ../sass/main.sass */
 nav {
   display: flex;
   justify-content: space-between;
@@ -75,7 +76,7 @@ nav {
   font-size: 14px;
   width: 100%;
 }
-/* line 60, ../sass/main.sass */
+/* line 61, ../sass/main.sass */
 nav .left-nav {
   list-style-type: none;
   display: flex;
@@ -88,21 +89,21 @@ nav .left-nav {
   font-size: 16px;
   border-bottom: 1px solid #c8c8c8;
   padding-bottom: 10px;
-  color: #c8c8c8;
+  color: white;
   padding-right: 20px;
 }
-/* line 74, ../sass/main.sass */
+/* line 75, ../sass/main.sass */
 nav .left-nav .social {
   margin: 10px;
 }
-/* line 76, ../sass/main.sass */
+/* line 77, ../sass/main.sass */
 nav .left-nav .social:hover {
   color: #ff006a;
   cursor: pointer;
   border-radius: 100%;
   transition: 0.4s;
 }
-/* line 81, ../sass/main.sass */
+/* line 82, ../sass/main.sass */
 nav .right-nav {
   list-style-type: none;
   display: flex;
@@ -114,17 +115,18 @@ nav .right-nav {
   letter-spacing: 1px;
   font-size: 14px;
 }
-/* line 91, ../sass/main.sass */
+/* line 92, ../sass/main.sass */
 nav .right-nav li {
   margin: 10px;
 }
-/* line 93, ../sass/main.sass */
+/* line 94, ../sass/main.sass */
 nav .right-nav li:hover {
   color: #ff006a;
   cursor: pointer;
+  transition: 0.4s;
 }
 
-/* line 97, ../sass/main.sass */
+/* line 99, ../sass/main.sass */
 .bloc-portfolio {
   width: 100%;
   background-color: #000;
@@ -133,7 +135,7 @@ nav .right-nav li:hover {
   height: 100%;
   justify-content: center;
 }
-/* line 104, ../sass/main.sass */
+/* line 106, ../sass/main.sass */
 .bloc-portfolio .titre {
   display: flex;
   flex-direction: row;
@@ -144,7 +146,7 @@ nav .right-nav li:hover {
   margin-top: 20px;
   margin-bottom: 40px;
 }
-/* line 113, ../sass/main.sass */
+/* line 115, ../sass/main.sass */
 .bloc-portfolio .titre .folder-icon {
   font-size: 18px;
   color: #ff006a;
@@ -152,7 +154,7 @@ nav .right-nav li:hover {
   border-radius: 100%;
   padding: 10px;
 }
-/* line 119, ../sass/main.sass */
+/* line 121, ../sass/main.sass */
 .bloc-portfolio .portfolio {
   color: white;
   font-weight: 500;
@@ -161,27 +163,27 @@ nav .right-nav li:hover {
   letter-spacing: 2px;
 }
 
-/* line 125, ../sass/main.sass */
+/* line 127, ../sass/main.sass */
 a {
   text-decoration: none;
   color: unset;
 }
 
-/* line 129, ../sass/main.sass */
+/* line 131, ../sass/main.sass */
 .box-portfolio {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-/* line 134, ../sass/main.sass */
+/* line 136, ../sass/main.sass */
 .box-portfolio .main-box {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   width: 70%;
 }
-/* line 139, ../sass/main.sass */
+/* line 141, ../sass/main.sass */
 .box-portfolio .titre-left-box {
   color: #ff006a;
   position: absolute;
@@ -189,24 +191,24 @@ a {
   left: 12%;
   padding-top: 20px;
 }
-/* line 145, ../sass/main.sass */
+/* line 147, ../sass/main.sass */
 .box-portfolio .left-box {
   display: flex;
   width: 50%;
 }
-/* line 148, ../sass/main.sass */
+/* line 150, ../sass/main.sass */
 .box-portfolio .right-box {
   display: flex;
   flex-direction: column;
   width: 50%;
   justify-content: space-around;
 }
-/* line 153, ../sass/main.sass */
+/* line 155, ../sass/main.sass */
 .box-portfolio .titre-right-box {
   color: #ff006a;
   margin: 0;
 }
-/* line 156, ../sass/main.sass */
+/* line 158, ../sass/main.sass */
 .box-portfolio .sous-titre-box {
   color: white;
   font-size: 16px;
@@ -214,7 +216,7 @@ a {
   white-space: pre-wrap;
   margin: 0;
 }
-/* line 162, ../sass/main.sass */
+/* line 164, ../sass/main.sass */
 .box-portfolio .portfolio-img-style {
   filter: grayscale(0.5);
   transition: padding-left 0.8s;
@@ -223,7 +225,7 @@ a {
   object-fit: cover;
   border-radius: 4px;
 }
-/* line 169, ../sass/main.sass */
+/* line 171, ../sass/main.sass */
 .box-portfolio .portfolio-img-style:hover {
   filter: grayscale(0);
   cursor: pointer;
@@ -231,7 +233,7 @@ a {
   transition: 0.8s;
 }
 
-/* line 176, ../sass/main.sass */
+/* line 177, ../sass/main.sass */
 .barre {
   display: flex;
   align-items: center;
@@ -242,7 +244,7 @@ a {
   margin-top: 20px;
 }
 
-/* line 185, ../sass/main.sass */
+/* line 186, ../sass/main.sass */
 .arrow {
   position: fixed;
   color: black;
@@ -255,4 +257,16 @@ a {
   height: 35px;
   width: 35px;
   text-align: center;
+}
+
+/* line 199, ../sass/main.sass */
+.icons-used {
+  width: 25px;
+  height: 25px;
+}
+
+/* line 203, ../sass/main.sass */
+.txt-html {
+  color: #ff006a;
+  font-size: 10px;
 }
