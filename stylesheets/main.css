@@ -9,29 +9,35 @@ html, body {
   width: 100%;
   height: 100%;
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serifa;
 }
+
 /* line 14, ../sass/main.sass */
-html body, body body {
+body {
   position: relative;
+  animation: fadeIn 1s;
 }
-/* line 16, ../sass/main.sass */
-html section, body section {
+
+/* line 17, ../sass/main.sass */
+section {
   height: 450px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 22, ../sass/main.sass */
-html section .center-div, body section .center-div {
+
+/* line 23, ../sass/main.sass */
+.center-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 2s;
 }
-/* line 27, ../sass/main.sass */
-html section .center-div .photo, body section .center-div .photo {
+
+/* line 29, ../sass/main.sass */
+.photo {
   width: 120px;
   height: 120px;
   object-fit: cover;
@@ -40,16 +46,18 @@ html section .center-div .photo, body section .center-div .photo {
   margin-right: 40px;
   border: 2px solid #ff006a;
 }
-/* line 35, ../sass/main.sass */
-html section .center-div .me, body section .center-div .me {
+
+/* line 37, ../sass/main.sass */
+.me {
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 48px;
   font-weight: 700;
   margin: 0;
 }
-/* line 41, ../sass/main.sass */
-html section .center-div .webdesign, body section .center-div .webdesign {
+
+/* line 43, ../sass/main.sass */
+.webdesign {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
   font-size: 30px;
@@ -61,12 +69,12 @@ html section .center-div .webdesign, body section .center-div .webdesign {
   color: #ff006a;
 }
 
-/* line 51, ../sass/main.sass */
+/* line 53, ../sass/main.sass */
 header {
   padding-bottom: 2px;
 }
 
-/* line 53, ../sass/main.sass */
+/* line 56, ../sass/main.sass */
 nav {
   display: flex;
   justify-content: space-between;
@@ -76,8 +84,19 @@ nav {
   font-size: 14px;
   width: 100%;
 }
-/* line 61, ../sass/main.sass */
-nav .left-nav {
+
+/* line 65, ../sass/main.sass */
+.lien-site {
+  color: white;
+  text-decoration: none;
+}
+/* line 68, ../sass/main.sass */
+.lien-site:hover {
+  color: #ff006a;
+}
+
+/* line 71, ../sass/main.sass */
+.left-nav {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -92,19 +111,21 @@ nav .left-nav {
   color: white;
   padding-right: 20px;
 }
-/* line 75, ../sass/main.sass */
-nav .left-nav .social {
+
+/* line 86, ../sass/main.sass */
+.social {
   margin: 10px;
 }
-/* line 77, ../sass/main.sass */
-nav .left-nav .social:hover {
+/* line 88, ../sass/main.sass */
+.social:hover {
   color: #ff006a;
   cursor: pointer;
   border-radius: 100%;
   transition: 0.4s;
 }
-/* line 82, ../sass/main.sass */
-nav .right-nav {
+
+/* line 94, ../sass/main.sass */
+.right-nav {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -115,47 +136,61 @@ nav .right-nav {
   letter-spacing: 1px;
   font-size: 14px;
 }
-/* line 92, ../sass/main.sass */
-nav .right-nav li {
+
+/* line 106, ../sass/main.sass */
+.hover-scale:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* line 110, ../sass/main.sass */
+.right-nav-li {
   margin: 10px;
 }
-/* line 94, ../sass/main.sass */
-nav .right-nav li:hover {
+/* line 112, ../sass/main.sass */
+.right-nav-li:hover {
   color: #ff006a;
   cursor: pointer;
   transition: 0.4s;
 }
 
-/* line 99, ../sass/main.sass */
+/* line 118, ../sass/main.sass */
 .bloc-portfolio {
   width: 100%;
   background-color: #000;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
 }
-/* line 106, ../sass/main.sass */
-.bloc-portfolio .titre {
+
+/* line 125, ../sass/main.sass */
+.last-box {
+  margin-bottom: 200px;
+}
+
+/* line 128, ../sass/main.sass */
+.titre {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 40%;
   align-self: flex-start;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  padding-top: 30px;
+  margin-bottom: 30px;
 }
-/* line 115, ../sass/main.sass */
-.bloc-portfolio .titre .folder-icon {
+
+/* line 138, ../sass/main.sass */
+.folder-icon {
   font-size: 18px;
   color: #ff006a;
   border: 2px solid #ff006a;
   border-radius: 100%;
   padding: 10px;
 }
-/* line 121, ../sass/main.sass */
-.bloc-portfolio .portfolio {
+
+/* line 145, ../sass/main.sass */
+.portfolio {
   color: white;
   font-weight: 500;
   font-size: 30px;
@@ -163,61 +198,90 @@ nav .right-nav li:hover {
   letter-spacing: 2px;
 }
 
-/* line 127, ../sass/main.sass */
+/* line 152, ../sass/main.sass */
+.services {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  margin-left: 30px;
+  letter-spacing: 2px;
+}
+
+/* line 159, ../sass/main.sass */
+.folder-icon {
+  font-size: 18px;
+  color: #ff006a;
+  border: 2px solid #ff006a;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+/* line 166, ../sass/main.sass */
 a {
   text-decoration: none;
   color: unset;
 }
 
-/* line 131, ../sass/main.sass */
+/* line 170, ../sass/main.sass */
 .box-portfolio {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-/* line 136, ../sass/main.sass */
-.box-portfolio .main-box {
+
+/* line 176, ../sass/main.sass */
+.main-box {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   width: 70%;
 }
-/* line 141, ../sass/main.sass */
-.box-portfolio .titre-left-box {
+/* line 181, ../sass/main.sass */
+.main-box:hover {
+  transform: scale(1.1);
+}
+
+/* line 184, ../sass/main.sass */
+.titre-left-box {
   color: #ff006a;
   position: absolute;
   z-index: 999;
   left: 12%;
   padding-top: 20px;
 }
-/* line 147, ../sass/main.sass */
-.box-portfolio .left-box {
+
+/* line 191, ../sass/main.sass */
+.left-box {
   display: flex;
   width: 50%;
 }
-/* line 150, ../sass/main.sass */
-.box-portfolio .right-box {
+
+/* line 195, ../sass/main.sass */
+.right-box {
   display: flex;
   flex-direction: column;
   width: 50%;
   justify-content: space-around;
 }
-/* line 155, ../sass/main.sass */
-.box-portfolio .titre-right-box {
+
+/* line 201, ../sass/main.sass */
+.titre-right-box {
   color: #ff006a;
   margin: 0;
 }
-/* line 158, ../sass/main.sass */
-.box-portfolio .sous-titre-box {
+
+/* line 205, ../sass/main.sass */
+.sous-titre-box {
   color: white;
   font-size: 16px;
   font-weight: 300;
   white-space: pre-wrap;
   margin: 0;
 }
-/* line 164, ../sass/main.sass */
-.box-portfolio .portfolio-img-style {
+
+/* line 212, ../sass/main.sass */
+.portfolio-img-style {
   filter: grayscale(0.5);
   transition: padding-left 0.8s;
   height: 200px;
@@ -225,26 +289,26 @@ a {
   object-fit: cover;
   border-radius: 4px;
 }
-/* line 171, ../sass/main.sass */
-.box-portfolio .portfolio-img-style:hover {
+/* line 219, ../sass/main.sass */
+.portfolio-img-style:hover {
   filter: grayscale(0);
   cursor: pointer;
   padding-left: 10px;
   transition: 0.8s;
 }
 
-/* line 177, ../sass/main.sass */
+/* line 225, ../sass/main.sass */
 .barre {
   display: flex;
   align-items: center;
   height: 2px;
   width: 80%;
   background-color: #323232;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 80px;
+  margin-top: 80px;
 }
 
-/* line 186, ../sass/main.sass */
+/* line 234, ../sass/main.sass */
 .arrow {
   position: fixed;
   color: black;
@@ -258,15 +322,122 @@ a {
   width: 35px;
   text-align: center;
 }
+/* line 246, ../sass/main.sass */
+.arrow:hover {
+  transform: scale(1.1);
+}
 
-/* line 199, ../sass/main.sass */
+/* line 249, ../sass/main.sass */
+.absolute-midd {
+  position: fixed;
+  bottom: 50%;
+  left: 20px;
+  transform: translate(-50%);
+  width: 100%;
+  align-items: center;
+  color: #ff006a;
+  flex-direction: column;
+}
+/* line 258, ../sass/main.sass */
+.absolute-midd .ol-absolute-midd {
+  display: flex;
+  list-style-type: none;
+  background-color: black;
+  padding: 15px;
+  height: 200px;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 1px solid #ff006a;
+}
+
+/* line 269, ../sass/main.sass */
 .icons-used {
   width: 25px;
   height: 25px;
 }
 
-/* line 203, ../sass/main.sass */
+/* line 273, ../sass/main.sass */
 .txt-html {
   color: #ff006a;
   font-size: 10px;
+}
+
+/* line 277, ../sass/main.sass */
+.bloc-services {
+  width: 100%;
+  height: auto;
+  background-image: url(/ressources/services-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 288, ../sass/main.sass */
+.box-services {
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+/* line 296, ../sass/main.sass */
+.left-box-services, .right-box-services {
+  color: white;
+  margin-left: 40px;
+  margin-top: 20px;
+  font-weight: 200;
+  width: 50%;
+}
+
+/* line 303, ../sass/main.sass */
+.titre-left-box-services, .titre-right-box-services {
+  color: #ff006a;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* line 308, ../sass/main.sass */
+.sous-titre-left-box-services, .sous-titre-left-box-services {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+/* line 313, ../sass/main.sass */
+.left-box-services-list, .right-box-services-list {
+  list-style-type: circle;
+}
+
+/* line 316, ../sass/main.sass */
+.right-box-services, .left-box-services {
+  width: 50%;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+/* line 330, ../sass/main.sass */
+.main-contact {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+/* line 335, ../sass/main.sass */
+label {
+  color: white;
+  margin-left: 200px;
 }

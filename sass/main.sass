@@ -10,46 +10,49 @@ html, body
     width: 100%
     height: 100%
     scroll-behavior: smooth
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifa
+body
+    position: relative
+    animation: fadeIn 1s
+section
+    height: 450px
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+.center-div
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    animation: fadeIn 2s
+.photo
+    width: 120px
+    height: 120px
+    object-fit: cover
+    image-rendering: high-quality
+    border-radius: 100%
+    margin-right: 40px
+    border: 2px solid $rougeViolet
+.me
+    color: white
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    body
-        position: relative        
-    section
-        height: 450px
-        width: 100%
-        display: flex
-        justify-content: center
-        align-items: center
-        .center-div
-            display: flex
-            flex-direction: row
-            justify-content: center
-            align-items: center
-            .photo
-                width: 120px
-                height: 120px
-                object-fit: cover
-                image-rendering: high-quality
-                border-radius: 100%
-                margin-right: 40px
-                border: 2px solid $rougeViolet
-            .me
-                color: white
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-                font-size: 48px
-                font-weight: 700
-                margin: 0
-            .webdesign
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-                font-weight: 500
-                font-size: 30px
-                color: white
-                margin-top: 20px
-                margin-bottom: 0
-                margin-left: 0
-                margin-right: 0
-                color: rgb(255, 0, 106)
+    font-size: 48px
+    font-weight: 700
+    margin: 0
+.webdesign
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-weight: 500
+    font-size: 30px
+    color: white
+    margin-top: 20px
+    margin-bottom: 0
+    margin-left: 0
+    margin-right: 0
+    color: rgb(255, 0, 106)
 header
-    padding-bottom: 2px                
+    padding-bottom: 2px
+
 nav
     display: flex
     justify-content: space-between
@@ -58,72 +61,108 @@ nav
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     font-size: 14px
     width: 100%
-    .left-nav
-        list-style-type: none
-        display: flex
-        flex-direction: row
-        width: 20%
-        justify-content: space-around
-        text-transform: uppercase
-        font-weight: 500
-        letter-spacing: 1px
-        font-size: 16px
-        border-bottom: 1px solid rgba(200, 200, 200, 1)
-        padding-bottom: 10px
-        color: white
-        padding-right: 20px
-        .social
-            margin: 10px
-            &:hover
-                color: $rougeViolet
-                cursor: pointer
-                border-radius: 100%
-                transition: 0.4s
-    .right-nav
-        list-style-type: none
-        display: flex
-        flex-direction: row
-        width: 40%
-        justify-content: space-around
-        text-transform: uppercase
-        font-weight: 500
-        letter-spacing: 1px
-        font-size: 14px
-        li
-            margin: 10px
-            &:hover
-                color: $rougeViolet
-                cursor: pointer
-                transition: 0.4s
+
+.lien-site
+    color: white
+    text-decoration: none
+    &:hover
+        color: $rougeViolet
+
+.left-nav
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    width: 20%
+    justify-content: space-around
+    text-transform: uppercase
+    font-weight: 500
+    letter-spacing: 1px
+    font-size: 16px
+    border-bottom: 1px solid rgba(200, 200, 200, 1)
+    padding-bottom: 10px
+    color: white
+    padding-right: 20px
+
+.social
+    margin: 10px
+    &:hover
+        color: $rougeViolet
+        cursor: pointer
+        border-radius: 100%
+        transition: 0.4s
+
+.right-nav
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    width: 40%
+    justify-content: space-around
+    text-transform: uppercase
+    font-weight: 500
+    letter-spacing: 1px
+    font-size: 14px
+
+.hover-scale
+    &:hover
+        transform: scale(1.1)
+        cursor: pointer
+
+.right-nav-li
+    margin: 10px
+    &:hover
+
+        color: $rougeViolet
+        cursor: pointer
+        transition: 0.4s
 
 .bloc-portfolio
     width: 100%
     background-color: #000
     display: flex
     flex-direction: column
-    height: 100%
     justify-content: center
-    .titre
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
-        width: 40%
-        align-self: flex-start
-        margin-top: 20px
-        margin-bottom: 40px
-        .folder-icon
-            font-size: 18px
-            color: $rougeViolet
-            border: 2px solid $rougeViolet
-            border-radius: 100%
-            padding: 10px
-    .portfolio
-        color: white
-        font-weight: 500
-        font-size: 30px
-        margin-left: 30px
-        letter-spacing: 2px
+
+.last-box
+    margin-bottom: 200px    
+
+.titre
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 40%
+    align-self: flex-start
+    padding-top: 30px
+    margin-bottom: 30px
+
+.folder-icon
+    font-size: 18px
+    color: $rougeViolet
+    border: 2px solid $rougeViolet
+    border-radius: 100%
+    padding: 10px
+
+.portfolio
+    color: white
+    font-weight: 500
+    font-size: 30px
+    margin-left: 30px
+    letter-spacing: 2px
+
+.services
+    color: white
+    font-weight: 500
+    font-size: 30px
+    margin-left: 30px
+    letter-spacing: 2px
+
+.folder-icon
+    font-size: 18px
+    color: $rougeViolet
+    border: 2px solid $rougeViolet
+    border-radius: 100%
+    padding: 10px
+
 a
     text-decoration: none
     color: unset
@@ -133,46 +172,55 @@ a
     flex-direction: column
     justify-content: center
     align-items: center
-    .main-box
-        display: flex
-        justify-content: space-between
-        flex-direction: row
-        width: 70%
-    .titre-left-box
-        color: $rougeViolet
-        position: absolute
-        z-index: 999
-        left: 12%
-        padding-top: 20px
-    .left-box
-        display: flex
-        width: 50%
-    .right-box
-        display: flex
-        flex-direction: column
-        width: 50%
-        justify-content: space-around
-    .titre-right-box
-        color: $rougeViolet
-        margin: 0
-    .sous-titre-box
-        color: white
-        font-size: 16px
-        font-weight: 300
-        white-space: pre-wrap
-        margin: 0
-    .portfolio-img-style
-        filter: grayscale(0.5)
-        transition: padding-left 0.8s
-        height: 200px
-        width: 400px
-        object-fit: cover
-        border-radius: 4px
-        &:hover
-            filter: grayscale(0)
-            cursor: pointer
-            padding-left: 10px
-            transition: 0.8s
+
+.main-box
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    width: 70%
+    &:hover
+        transform: scale(1.1)
+
+.titre-left-box
+    color: $rougeViolet
+    position: absolute
+    z-index: 999
+    left: 12%
+    padding-top: 20px
+
+.left-box
+    display: flex
+    width: 50%
+
+.right-box
+    display: flex
+    flex-direction: column
+    width: 50%
+    justify-content: space-around
+
+.titre-right-box
+    color: $rougeViolet
+    margin: 0
+
+.sous-titre-box
+    color: white
+    font-size: 16px
+    font-weight: 300
+    white-space: pre-wrap
+    margin: 0
+
+.portfolio-img-style
+    filter: grayscale(0.5)
+    transition: padding-left 0.8s
+    height: 200px
+    width: 400px
+    object-fit: cover
+    border-radius: 4px
+    &:hover
+        filter: grayscale(0)
+        cursor: pointer
+        padding-left: 10px
+        transition: 0.8s
 
 .barre
     display: flex
@@ -180,8 +228,8 @@ a
     height: 2px
     width: 80%
     background-color: rgba(50, 50, 50, 1)
-    margin-bottom: 20px
-    margin-top: 20px
+    margin-bottom: 80px
+    margin-top: 80px
 
 .arrow
     position: fixed
@@ -195,6 +243,28 @@ a
     height: 35px
     width: 35px
     text-align: center
+    &:hover
+        transform: scale(1.1)
+
+.absolute-midd
+    position: fixed
+    bottom: 50%
+    left: 20px
+    transform: translate(-50%)
+    width: 100%
+    align-items: center
+    color: $rougeViolet
+    flex-direction: column
+    .ol-absolute-midd
+        display: flex
+        list-style-type: none
+        background-color: black
+        padding: 15px
+        height: 200px
+        justify-content: space-around
+        flex-direction: column
+        border: 1px solid $rougeViolet
+
 
 .icons-used
     width: 25px
@@ -203,3 +273,65 @@ a
 .txt-html
     color: $rougeViolet
     font-size: 10px
+
+.bloc-services
+    width: 100%
+    height: auto
+    background-image: url(/ressources/services-bg.jpeg)
+    background-size: cover
+    background-position: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.box-services
+    width: 80%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.8)
+    display: flex
+    flex-direction: row
+    padding-bottom: 20px
+
+.left-box-services, .right-box-services
+    color: white
+    margin-left: 40px
+    margin-top: 20px
+    font-weight: 200
+    width: 50%
+
+.titre-left-box-services, .titre-right-box-services
+    color: $rougeViolet
+    font-size: 24px
+    margin: 0
+
+.sous-titre-left-box-services, .sous-titre-left-box-services
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-weight: 300
+    text-decoration: underline
+
+.left-box-services-list, .right-box-services-list
+    list-style-type: circle
+
+.right-box-services, .left-box-services
+    width: 50%
+    height: 100%
+
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+        transform: translate(-40px)
+    100%
+        opacity: 1
+        transform: translate(0px)
+
+
+.main-contact
+    width: 100%
+    height: 100%
+    background-color: black
+
+label
+    color: white
+    margin-left: 200px
