@@ -135,26 +135,28 @@ nav {
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 14px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
-/* line 106, ../sass/main.sass */
+/* line 108, ../sass/main.sass */
 .hover-scale:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-/* line 110, ../sass/main.sass */
+/* line 112, ../sass/main.sass */
 .right-nav-li {
   margin: 10px;
 }
-/* line 112, ../sass/main.sass */
+/* line 114, ../sass/main.sass */
 .right-nav-li:hover {
   color: #ff006a;
   cursor: pointer;
   transition: 0.4s;
 }
 
-/* line 118, ../sass/main.sass */
+/* line 119, ../sass/main.sass */
 .bloc-portfolio {
   width: 100%;
   background-color: #000;
@@ -163,12 +165,12 @@ nav {
   justify-content: center;
 }
 
-/* line 125, ../sass/main.sass */
+/* line 126, ../sass/main.sass */
 .last-box {
   margin-bottom: 200px;
 }
 
-/* line 128, ../sass/main.sass */
+/* line 129, ../sass/main.sass */
 .titre {
   display: flex;
   flex-direction: row;
@@ -180,7 +182,7 @@ nav {
   margin-bottom: 30px;
 }
 
-/* line 138, ../sass/main.sass */
+/* line 139, ../sass/main.sass */
 .folder-icon {
   font-size: 18px;
   color: #ff006a;
@@ -189,7 +191,7 @@ nav {
   padding: 10px;
 }
 
-/* line 145, ../sass/main.sass */
+/* line 146, ../sass/main.sass */
 .portfolio {
   color: white;
   font-weight: 500;
@@ -198,7 +200,7 @@ nav {
   letter-spacing: 2px;
 }
 
-/* line 152, ../sass/main.sass */
+/* line 153, ../sass/main.sass */
 .services {
   color: white;
   font-weight: 500;
@@ -207,7 +209,7 @@ nav {
   letter-spacing: 2px;
 }
 
-/* line 159, ../sass/main.sass */
+/* line 160, ../sass/main.sass */
 .folder-icon {
   font-size: 18px;
   color: #ff006a;
@@ -216,13 +218,13 @@ nav {
   padding: 10px;
 }
 
-/* line 166, ../sass/main.sass */
+/* line 167, ../sass/main.sass */
 a {
   text-decoration: none;
   color: unset;
 }
 
-/* line 170, ../sass/main.sass */
+/* line 171, ../sass/main.sass */
 .box-portfolio {
   display: flex;
   flex-direction: column;
@@ -230,19 +232,19 @@ a {
   align-items: center;
 }
 
-/* line 176, ../sass/main.sass */
+/* line 177, ../sass/main.sass */
 .main-box {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   width: 70%;
 }
-/* line 181, ../sass/main.sass */
+/* line 182, ../sass/main.sass */
 .main-box:hover {
   transform: scale(1.1);
 }
 
-/* line 184, ../sass/main.sass */
+/* line 185, ../sass/main.sass */
 .titre-left-box {
   color: #ff006a;
   position: absolute;
@@ -251,13 +253,13 @@ a {
   padding-top: 20px;
 }
 
-/* line 191, ../sass/main.sass */
+/* line 192, ../sass/main.sass */
 .left-box {
   display: flex;
   width: 50%;
 }
 
-/* line 195, ../sass/main.sass */
+/* line 196, ../sass/main.sass */
 .right-box {
   display: flex;
   flex-direction: column;
@@ -265,13 +267,13 @@ a {
   justify-content: space-around;
 }
 
-/* line 201, ../sass/main.sass */
+/* line 202, ../sass/main.sass */
 .titre-right-box {
   color: #ff006a;
   margin: 0;
 }
 
-/* line 205, ../sass/main.sass */
+/* line 206, ../sass/main.sass */
 .sous-titre-box {
   color: white;
   font-size: 16px;
@@ -280,7 +282,7 @@ a {
   margin: 0;
 }
 
-/* line 212, ../sass/main.sass */
+/* line 213, ../sass/main.sass */
 .portfolio-img-style {
   filter: grayscale(0.5);
   transition: padding-left 0.8s;
@@ -289,7 +291,7 @@ a {
   object-fit: cover;
   border-radius: 4px;
 }
-/* line 219, ../sass/main.sass */
+/* line 220, ../sass/main.sass */
 .portfolio-img-style:hover {
   filter: grayscale(0);
   cursor: pointer;
@@ -297,7 +299,7 @@ a {
   transition: 0.8s;
 }
 
-/* line 225, ../sass/main.sass */
+/* line 226, ../sass/main.sass */
 .barre {
   display: flex;
   align-items: center;
@@ -308,7 +310,7 @@ a {
   margin-top: 80px;
 }
 
-/* line 234, ../sass/main.sass */
+/* line 235, ../sass/main.sass */
 .arrow {
   position: fixed;
   color: black;
@@ -322,18 +324,17 @@ a {
   width: 35px;
   text-align: center;
 }
-/* line 246, ../sass/main.sass */
+/* line 247, ../sass/main.sass */
 .arrow:hover {
   transform: scale(1.1);
 }
 
-/* line 249, ../sass/main.sass */
+/* line 250, ../sass/main.sass */
 .absolute-midd {
   position: fixed;
   bottom: 50%;
   left: 20px;
   transform: translate(-50%);
-  width: 100%;
   align-items: center;
   color: #ff006a;
   flex-direction: column;
@@ -350,19 +351,24 @@ a {
   border: 1px solid #ff006a;
 }
 
-/* line 269, ../sass/main.sass */
+/* line 268, ../sass/main.sass */
+.unset-nav {
+  width: unset;
+}
+
+/* line 272, ../sass/main.sass */
 .icons-used {
   width: 25px;
   height: 25px;
 }
 
-/* line 273, ../sass/main.sass */
+/* line 276, ../sass/main.sass */
 .txt-html {
   color: #ff006a;
   font-size: 10px;
 }
 
-/* line 277, ../sass/main.sass */
+/* line 280, ../sass/main.sass */
 .bloc-services {
   width: 100%;
   height: auto;
@@ -375,7 +381,7 @@ a {
   flex-direction: column;
 }
 
-/* line 288, ../sass/main.sass */
+/* line 291, ../sass/main.sass */
 .box-services {
   width: 80%;
   height: 100%;
@@ -383,9 +389,10 @@ a {
   display: flex;
   flex-direction: row;
   padding-bottom: 20px;
+  border: 1px solid #ff006a;
 }
 
-/* line 296, ../sass/main.sass */
+/* line 300, ../sass/main.sass */
 .left-box-services, .right-box-services {
   color: white;
   margin-left: 40px;
@@ -394,26 +401,26 @@ a {
   width: 50%;
 }
 
-/* line 303, ../sass/main.sass */
+/* line 307, ../sass/main.sass */
 .titre-left-box-services, .titre-right-box-services {
   color: #ff006a;
   font-size: 24px;
   margin: 0;
 }
 
-/* line 308, ../sass/main.sass */
+/* line 312, ../sass/main.sass */
 .sous-titre-left-box-services, .sous-titre-left-box-services {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   text-decoration: underline;
 }
 
-/* line 313, ../sass/main.sass */
+/* line 317, ../sass/main.sass */
 .left-box-services-list, .right-box-services-list {
   list-style-type: circle;
 }
 
-/* line 316, ../sass/main.sass */
+/* line 320, ../sass/main.sass */
 .right-box-services, .left-box-services {
   width: 50%;
   height: 100%;
@@ -429,15 +436,95 @@ a {
     transform: translate(0px);
   }
 }
-/* line 330, ../sass/main.sass */
+/* line 333, ../sass/main.sass */
+.margin-right {
+  margin-left: 50px;
+}
+
+/* line 336, ../sass/main.sass */
 .main-contact {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-image: url(/ressources/imghome.jpeg);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-/* line 335, ../sass/main.sass */
+/* line 347, ../sass/main.sass */
 label {
   color: white;
-  margin-left: 200px;
+  margin-right: 5px;
+}
+
+/* line 351, ../sass/main.sass */
+.box-contact {
+  height: 60%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #ff006a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  flex-direction: row;
+}
+
+/* line 362, ../sass/main.sass */
+.contact-icon {
+  font-size: 100px;
+}
+/* line 364, ../sass/main.sass */
+.contact-icon:hover {
+  color: #ff006a;
+  transform: scale(1.1);
+  transition: 0.4;
+  cursor: pointer;
+}
+
+/* line 370, ../sass/main.sass */
+.email {
+  margin-top: 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* line 376, ../sass/main.sass */
+.regroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 382, ../sass/main.sass */
+.align-items-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 388, ../sass/main.sass */
+footer {
+  padding: 20px;
+  height: 75px;
+  color: white;
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* line 396, ../sass/main.sass */
+.footer-ol {
+  list-style-type: none;
+}
+
+/* line 400, ../sass/main.sass */
+.color-rv {
+  color: #ff006a;
 }
