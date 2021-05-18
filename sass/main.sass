@@ -1,14 +1,13 @@
+@import ../sass/_tablet
+@import ../sass/_mobile
+
 $rougeViolet: #ff006a
 
 html, body
     margin: 0
-    background-color: rgba(10, 10, 10, 1)
-    background-image: url("/ressources/bg.jpg")
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
     width: 100%
     height: 100%
+    background-color: black
     scroll-behavior: smooth
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifa
 body
@@ -20,6 +19,11 @@ section
     display: flex
     justify-content: center
     align-items: center
+    background-color: rgba(10, 10, 10, 1)
+    background-image: url("/ressources/bg.jpg")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
 .center-div
     display: flex
     flex-direction: row
@@ -78,8 +82,6 @@ nav
     font-weight: 500
     letter-spacing: 1px
     font-size: 16px
-    border-bottom: 1px solid rgba(200, 200, 200, 1)
-    padding-bottom: 10px
     color: white
     padding-right: 20px
 
@@ -178,7 +180,7 @@ a
     display: flex
     justify-content: space-between
     flex-direction: row
-    width: 70%
+    width: 100%
     &:hover
         transform: scale(1.1)
 
@@ -191,13 +193,14 @@ a
 
 .left-box
     display: flex
-    width: 50%
-
+    width: 100%
+    justify-content: center
+    align-items: center
 .right-box
     display: flex
     flex-direction: column
-    width: 50%
-    justify-content: space-around
+    width: 100%
+    justify-content: center
 
 .titre-right-box
     color: $rougeViolet
@@ -336,9 +339,6 @@ a
 .main-contact
     width: 100%
     height: 100%
-    background-image: url(/ressources/imghome.jpeg)
-    background-position: center
-    background-size: cover
     justify-content: center
     align-items: center
     display: flex
@@ -399,3 +399,17 @@ footer
 
 .color-rv
     color: $rougeViolet
+
+.privacy 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 60%
+    height: 60%
+    color: white
+
+        
+
+
+    
