@@ -659,7 +659,7 @@ a {
 /* line 340, ../sass/main.sass */
 .main-contact {
   width: 100%;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
   display: flex;
