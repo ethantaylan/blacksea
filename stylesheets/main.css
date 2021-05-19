@@ -56,11 +56,6 @@
   footer {
     padding-bottom: 150px !important;
   }
-
-  /* line 33, ../sass/_tablet.sass */
-  .right-box {
-    margin: 0 !important;
-  }
 }
 @media screen and (max-width: 768px) {
   /* line 2, ../sass/_mobile.sass */
@@ -449,14 +444,15 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 100%;
+  width: 90%;
 }
 /* line 184, ../sass/main.sass */
 .main-box:hover {
-  transform: scale(1.1);
+  transition: 0.4s;
+  transform: scale(1.02);
 }
 
-/* line 187, ../sass/main.sass */
+/* line 188, ../sass/main.sass */
 .titre-left-box {
   color: #ff006a;
   position: absolute;
@@ -465,7 +461,7 @@ a {
   padding-top: 20px;
 }
 
-/* line 194, ../sass/main.sass */
+/* line 195, ../sass/main.sass */
 .left-box {
   display: flex;
   width: 100%;
@@ -473,7 +469,7 @@ a {
   align-items: center;
 }
 
-/* line 199, ../sass/main.sass */
+/* line 200, ../sass/main.sass */
 .right-box {
   display: flex;
   flex-direction: column;
@@ -482,22 +478,23 @@ a {
   margin-left: 20px;
 }
 
-/* line 206, ../sass/main.sass */
+/* line 207, ../sass/main.sass */
 .titre-right-box {
   color: #ff006a;
   margin: 0;
 }
 
-/* line 210, ../sass/main.sass */
+/* line 211, ../sass/main.sass */
 .sous-titre-box {
   color: white;
   font-size: 16px;
   font-weight: 300;
   white-space: pre-wrap;
   margin: 0;
+  width: 70%;
 }
 
-/* line 217, ../sass/main.sass */
+/* line 219, ../sass/main.sass */
 .portfolio-img-style {
   filter: grayscale(0.5);
   transition: padding-left 0.8s;
@@ -506,7 +503,7 @@ a {
   object-fit: cover;
   border-radius: 4px;
 }
-/* line 224, ../sass/main.sass */
+/* line 226, ../sass/main.sass */
 .portfolio-img-style:hover {
   filter: grayscale(0);
   cursor: pointer;
@@ -514,7 +511,7 @@ a {
   transition: 0.8s;
 }
 
-/* line 230, ../sass/main.sass */
+/* line 232, ../sass/main.sass */
 .barre {
   display: flex;
   align-items: center;
@@ -525,7 +522,7 @@ a {
   margin-top: 80px;
 }
 
-/* line 239, ../sass/main.sass */
+/* line 241, ../sass/main.sass */
 .arrow {
   position: fixed;
   color: black;
@@ -539,12 +536,12 @@ a {
   width: 35px;
   text-align: center;
 }
-/* line 251, ../sass/main.sass */
+/* line 253, ../sass/main.sass */
 .arrow:hover {
   transform: scale(1.1);
 }
 
-/* line 254, ../sass/main.sass */
+/* line 256, ../sass/main.sass */
 .absolute-midd {
   position: fixed;
   bottom: 50%;
@@ -554,7 +551,7 @@ a {
   color: #ff006a;
   flex-direction: column;
 }
-/* line 262, ../sass/main.sass */
+/* line 264, ../sass/main.sass */
 .absolute-midd .ol-absolute-midd {
   display: flex;
   list-style-type: none;
@@ -566,24 +563,24 @@ a {
   border: 1px solid #ff006a;
 }
 
-/* line 272, ../sass/main.sass */
+/* line 274, ../sass/main.sass */
 .unset-nav {
   width: unset;
 }
 
-/* line 276, ../sass/main.sass */
+/* line 278, ../sass/main.sass */
 .icons-used {
   width: 25px;
   height: 25px;
 }
 
-/* line 280, ../sass/main.sass */
+/* line 282, ../sass/main.sass */
 .txt-html {
   color: #ff006a;
   font-size: 10px;
 }
 
-/* line 284, ../sass/main.sass */
+/* line 286, ../sass/main.sass */
 .bloc-services {
   width: 100%;
   height: auto;
@@ -596,7 +593,7 @@ a {
   flex-direction: column;
 }
 
-/* line 295, ../sass/main.sass */
+/* line 297, ../sass/main.sass */
 .box-services {
   width: 80%;
   height: 100%;
@@ -607,7 +604,7 @@ a {
   border: 1px solid #ff006a;
 }
 
-/* line 304, ../sass/main.sass */
+/* line 306, ../sass/main.sass */
 .left-box-services, .right-box-services {
   color: white;
   margin-left: 40px;
@@ -616,26 +613,26 @@ a {
   width: 50%;
 }
 
-/* line 311, ../sass/main.sass */
+/* line 313, ../sass/main.sass */
 .titre-left-box-services, .titre-right-box-services {
   color: #ff006a;
   font-size: 24px;
   margin: 0;
 }
 
-/* line 316, ../sass/main.sass */
+/* line 318, ../sass/main.sass */
 .sous-titre-left-box-services, .sous-titre-left-box-services {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   text-decoration: underline;
 }
 
-/* line 321, ../sass/main.sass */
+/* line 323, ../sass/main.sass */
 .left-box-services-list, .right-box-services-list {
   list-style-type: circle;
 }
 
-/* line 324, ../sass/main.sass */
+/* line 326, ../sass/main.sass */
 .right-box-services, .left-box-services {
   width: 50%;
   height: 100%;
@@ -651,12 +648,12 @@ a {
     transform: translate(0px);
   }
 }
-/* line 337, ../sass/main.sass */
+/* line 339, ../sass/main.sass */
 .margin-right {
   margin-left: 50px;
 }
 
-/* line 340, ../sass/main.sass */
+/* line 342, ../sass/main.sass */
 .main-contact {
   width: 100%;
   height: auto;
@@ -666,13 +663,13 @@ a {
   flex-direction: column;
 }
 
-/* line 348, ../sass/main.sass */
+/* line 350, ../sass/main.sass */
 label {
   color: white;
   margin-right: 5px;
 }
 
-/* line 352, ../sass/main.sass */
+/* line 354, ../sass/main.sass */
 .box-contact {
   height: 60%;
   width: 80%;
@@ -685,11 +682,11 @@ label {
   flex-direction: row;
 }
 
-/* line 363, ../sass/main.sass */
+/* line 365, ../sass/main.sass */
 .contact-icon {
   font-size: 100px;
 }
-/* line 365, ../sass/main.sass */
+/* line 367, ../sass/main.sass */
 .contact-icon:hover {
   color: #ff006a;
   transform: scale(1.1);
@@ -697,7 +694,7 @@ label {
   cursor: pointer;
 }
 
-/* line 371, ../sass/main.sass */
+/* line 373, ../sass/main.sass */
 .email {
   margin-top: 40px;
   font-size: 14px;
@@ -705,7 +702,7 @@ label {
   font-weight: 300;
 }
 
-/* line 377, ../sass/main.sass */
+/* line 379, ../sass/main.sass */
 .regroup {
   display: flex;
   justify-content: space-between;
@@ -713,7 +710,7 @@ label {
   flex-direction: column;
 }
 
-/* line 383, ../sass/main.sass */
+/* line 385, ../sass/main.sass */
 .align-items-center {
   display: flex;
   flex-direction: column;
@@ -721,7 +718,7 @@ label {
   align-items: center;
 }
 
-/* line 389, ../sass/main.sass */
+/* line 391, ../sass/main.sass */
 footer {
   padding: 20px;
   height: 75px;
@@ -731,17 +728,17 @@ footer {
   letter-spacing: 0.5px;
 }
 
-/* line 397, ../sass/main.sass */
+/* line 399, ../sass/main.sass */
 .footer-ol {
   list-style-type: none;
 }
 
-/* line 401, ../sass/main.sass */
+/* line 403, ../sass/main.sass */
 .color-rv {
   color: #ff006a;
 }
 
-/* line 404, ../sass/main.sass */
+/* line 406, ../sass/main.sass */
 .privacy {
   display: flex;
   flex-direction: column;
