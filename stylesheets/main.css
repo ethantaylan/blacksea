@@ -56,6 +56,12 @@
   footer {
     padding-bottom: 150px !important;
   }
+
+  /* line 33, ../sass/_tablet.sass */
+  .email {
+    margin-top: 10px !important;
+    margin-bottom: 60px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   /* line 2, ../sass/_mobile.sass */
