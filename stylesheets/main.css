@@ -877,7 +877,7 @@ footer {
 /* line 486, ../sass/main.sass */
 .portfolio-active {
   font-size: 20px !important;
-  color: #ff006a;
+  color: white;
 }
 
 /* line 490, ../sass/main.sass */
@@ -887,4 +887,20 @@ footer {
   margin-top: 200px;
   margin-bottom: 100px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* line 500, ../sass/main.sass */
+.rotate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: #ff006a;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  margin-right: 10px;
 }
