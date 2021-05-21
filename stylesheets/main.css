@@ -877,5 +877,14 @@ footer {
 /* line 486, ../sass/main.sass */
 .portfolio-active {
   font-size: 20px !important;
-  color: white !important;
+  color: #ff006a;
+}
+
+/* line 490, ../sass/main.sass */
+.go-to-home {
+  color: #ff006a;
+  width: 100%;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  cursor: pointer;
 }
