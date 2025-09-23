@@ -1,5 +1,5 @@
+import AppLayout from "./components/AppLayout/AppLayout";
 
 export default function App() {
-  return <div>Blacksea</div>; 
-  
+  return <AppLayout />;
 }
