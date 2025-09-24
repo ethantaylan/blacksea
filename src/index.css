@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap");
+@font-face {
+  font-family: "Birds";
+  src: url("./assets/fonts/birds.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: lofi --default, dark --prefersdark;
@@ -6,4 +12,8 @@
 
 * {
   font-family: "Wix Madefor Text", sans-serif;
+}
+
+.bird {
+  font-family: "Birds", sans-serif !important;
 }

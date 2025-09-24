@@ -1,30 +1,37 @@
+import clsx from "clsx";
+import { NavLink } from "react-router-dom";
+
 export function Navbar() {
-const menus = [
+  const menus = [
     { name: "À propos", link: "/about" },
     { name: "Services", link: "/services" },
     { name: "Équipe", link: "/team" },
-];
+    { name: "Contact", link: "/contact" },
+  ];
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <a className="text-2xl font-bold cursor-pointer">
+    <div className="w-full flex justify-center relative p-4">
+      <div className="flex fixed w-6/12 items-center justify-center h-20 rounded-3xl bg-transparent z-50 backdrop-blur bg-blend-difference px-4">
+        <NavLink className="text-2xl w-full font-bold cursor-pointer" to="/">
           {/* <img src={BlackseaLogo} className="invert object-contain h-11 antialiased" alt="blacksea" /> */}
           blacksea
-        </a>
-      </div>
+        </NavLink>
 
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal font-medium text-lg px-1">
+        <ul className="font-medium text-lg px-1 flex text-nowrap items-end">
           {menus.map((menuItem, index) => (
             <li key={index}>
-              <a  className="rounded-full px-5 py-2" href={menuItem.link}>{menuItem.name}</a>
+              <a
+                className={clsx(
+                  "rounded-full px-5 py-2",
+                  menuItem.name === "Contact" && "bg-black text-white"
+                )}
+                href={menuItem.link}
+              >
+                {menuItem.name}
+              </a>
             </li>
           ))}
         </ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn btn-primary rounded-full">Contact</a>
       </div>
     </div>
   );
