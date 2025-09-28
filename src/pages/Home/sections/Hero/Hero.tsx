@@ -4,14 +4,8 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { DotBackground } from "../../../../components/DotBackground/DotBackground";
 
 export function Hero() {
-  // const { scrollYProgress } = useScroll();
-
-  // const birdX = useTransform(scrollYProgress, [0, 0.2], [0, 1000]);
-  // const birdRotate = useTransform(scrollYProgress, [0, 0.2], [0, 45]);
-  // const birdScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.5]);
-
   return (
-    <motion.div
+    <motion.section
       className="hero h-screen relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -31,19 +25,6 @@ export function Hero() {
           transition={{ duration: 1 }}
         >
           BLACKSEA
-          {/* <motion.span
-            className="bird absolute left-[350px] bottom-[115px]"
-            style={{
-              x: birdX,
-              rotate: birdRotate,
-              scale: birdScale,
-            }}
-            animate={{
-              rotateY: [0, 10, -10, 0],
-            }}
-          >
-            a
-          </motion.span> */}
         </motion.h1>
 
         <motion.p
@@ -78,6 +59,6 @@ export function Hero() {
           </motion.button>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 }

@@ -17,3 +17,4 @@
 .bird {
   font-family: "Birds", sans-serif !important;
 }
+@plugin 'lightswind/plugin'; /* <-- Add this line */
