@@ -11,7 +11,7 @@ export default function Services() {
         <h1 className="text-5xl mt-20">
           Découvrez comment nous avons transformé des idées en réalité.
         </h1>
-        <h2 className="text-gray-400 text-5xl mt-3">
+        <h2 className="text-gray-400 text-5xl">
           Plongez dans les histoires de conceptions de produits réussies qui
           font la différence.
         </h2>
