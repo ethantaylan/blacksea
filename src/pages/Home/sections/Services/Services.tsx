@@ -20,7 +20,7 @@ export default function Services() {
                   <motion.a
                     key={item.title}
                     href={item.url}
-                    className="block py-2 md:py-3 text-sm md:text-base"
+                    className="block py-2 md:py-3 text-lg md:text-xl"
                   >
                     {item.title}
                   </motion.a>
