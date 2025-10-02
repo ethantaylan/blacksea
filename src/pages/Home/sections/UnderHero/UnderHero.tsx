@@ -1,11 +1,29 @@
 import { motion } from "framer-motion";
 import Waves from "../../../../assets/wave.mp4";
+import { InformationCard } from "../../components/InformationCard/InformationCard";
 
 export const UnderHero = () => {
+  const infos = [
+    {
+      title: "À PROPOS DE NOUS",
+      description:
+        "Une équipe passionnée de développeurs, dédiée à transformer vos idées en projets digitaux.",
+    },
+    {
+      title: "BASÉ EN",
+      description: "France &\nTravaille dans le monde entier.",
+    },
+    {
+      title: "EXPERT DANS",
+      description:
+        "Sites vitrines, e-commerce, branding, SEO et campagnes digitales.",
+    },
+  ];
+
   return (
-    <section className="min-h-[300px] text-white py-12">
+    <section className="min-h-[300px] h-[500px] text-white py-12">
       <motion.div
-        className="mx-auto shadow-xl bg-black rounded-3xl p-8 relative overflow-hidden"
+        className="shadow-xl bg-black rounded-3xl p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -22,43 +40,13 @@ export const UnderHero = () => {
             </video>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center md:text-left"
-          >
-            <p className="text-sm text-gray-400 mb-2">À PROPOS DE NOUS</p>
-            <p className="text-xl font-semibold">
-              Une équipe passionnée de développeurs, dédiée à transformer vos
-              idées en projets digitaux.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-center md:text-left w-full"
-          >
-            <p className="text-sm text-gray-400 mb-2">BASÉ EN</p>
-            <p className="text-xl font-semibold">
-              France &<br />
-              Travaille dans le monde entier.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center md:text-left"
-          >
-            <p className="text-sm text-gray-400 mb-2">EXPERT DANS</p>
-            <p className="text-xl font-semibold">
-              Sites vitrines, e-commerce, branding, SEO et campagnes digitales.
-            </p>
-          </motion.div>
+          {infos.map((i) => (
+            <InformationCard
+              key={i.title}
+              title={i.title}
+              description={i.description}
+            />
+          ))}
         </div>
       </motion.div>
     </section>

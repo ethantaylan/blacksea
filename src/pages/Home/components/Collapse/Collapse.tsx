@@ -12,7 +12,7 @@ export function Collapse({ content, title }: CollapseProps) {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   return (
-    <div onClick={() => setIsChecked(!isChecked)} className="">
+    <div onClick={() => setIsChecked(!isChecked)}>
       <div className="flex justify-between text-5xl cursor-pointer">
         <p>{title}</p>
 

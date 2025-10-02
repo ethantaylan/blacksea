@@ -1,14 +1,8 @@
 import clsx from "clsx";
 import { NavLink } from "react-router-dom";
+import { menus } from "../../consts";
 
 export function Navbar() {
-  const menus = [
-    { name: "À propos", link: "/about" },
-    { name: "Services", link: "/services" },
-    { name: "Équipe", link: "/team" },
-    { name: "Contact", link: "/contact" },
-  ];
-
   return (
     <div className="w-full flex justify-center relative p-4">
       <div className="flex fixed w-6/12 items-center justify-center h-20 rounded-3xl bg-transparent z-50 backdrop-blur bg-blend-difference px-4">

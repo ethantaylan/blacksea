@@ -85,3 +85,29 @@ export const services = [
     ],
   },
 ];
+
+export const menus = [
+  { name: "À propos", link: "/about" },
+  { name: "Services", link: "/services" },
+  { name: "Équipe", link: "/team" },
+  { name: "Contact", link: "/contact" },
+];
+
+export const socials = [
+  {
+    name: "Twitter",
+    url: "https://twitter.com",
+  },
+  {
+    name: "Dribbble",
+    url: "https://dribbble.com",
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com",
+  },
+];

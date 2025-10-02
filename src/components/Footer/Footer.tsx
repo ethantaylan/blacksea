@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { menus, socials } from "../../consts";
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white pt-20 pb-4 items-center flex flex-col">
+    <footer className="bg-black h-[600px] text-white pt-20 pb-4 items-center flex flex-col justify-between">
       <div className="container flex justify-between">
         <div className="w-full">
           <motion.h2
@@ -29,38 +30,34 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:flex md:justify-between w-2/4 items-start">
           <div className="space-y-4">
-            {["Home", "Work", "About", "Contact"].map((item, index) => (
+            {menus.map((item, index) => (
               <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.link}
+                href={`#${item.link}`}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="block hover:text-gray-300 transition-colors"
               >
-                {item}
+                {item.name}
               </motion.a>
             ))}
           </div>
 
           <div className="space-y-4">
-            {[
-              { name: "Twitter", icon: <MdOutlineArrowOutward /> },
-              { name: "Dribbble", icon: <MdOutlineArrowOutward /> },
-              { name: "Instagram", icon: <MdOutlineArrowOutward /> },
-              { name: "LinkedIn", icon: <MdOutlineArrowOutward /> },
-            ].map((item) => (
+            {socials.map((item) => (
               <motion.a
                 key={item.name}
-                href={`https://${item.name.toLowerCase()}.com`}
+                href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 className="flex justify-between w-40 items-center gap-2 hover:gap-4 transition-all hover:text-gray-300"
               >
-                {item.name} {item.icon}
+                {item.name} <MdOutlineArrowOutward />
               </motion.a>
+
             ))}
           </div>
         </div>
