@@ -24,70 +24,52 @@ import {
   ThreeDScrollTriggerRow,
 } from "../lightswind/3d-scroll-trigger";
 
-const ICON_SIZE = 120;
-
 type TechnologyItem = {
   name: string;
-  icon: JSX.Element;
+  IconComponent: React.ComponentType<{ size: number }>;
 };
 
 const technologies: TechnologyItem[] = [
-  { name: "React", icon: <SiReact size={ICON_SIZE} /> },
-  { name: "TypeScript", icon: <SiTypescript size={ICON_SIZE} /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss size={ICON_SIZE} /> },
-  { name: "Bootstrap", icon: <FaBootstrap size={ICON_SIZE} /> },
-  {
-    name: "DaisyUI",
-    icon: <IoFlower size={ICON_SIZE} />,
-  },
-  {
-    name: "Axios",
-    icon: <SiAxios size={ICON_SIZE} />,
-  },
-  { name: "Supabase", icon: <SiSupabase size={ICON_SIZE} /> },
-  {
-    name: "Zustand",
-    icon: <RiBearSmileFill size={ICON_SIZE} />,
-  },
-  {
-    name: "Clerk",
-    icon: <SiClerk size={ICON_SIZE} />,
-  },
-  {
-    name: "Zod",
-    icon: <SiZod size={ICON_SIZE} />,
-  },
-  { name: "Strapi", icon: <SiStrapi size={ICON_SIZE} /> },
-  { name: "Git", icon: <SiGit size={ICON_SIZE} /> },
-  { name: "Figma", icon: <SiFigma size={ICON_SIZE} /> },
-  { name: "Vercel", icon: <SiVercel size={ICON_SIZE} /> },
-  {
-    name: "Google Analytics",
-    icon: <SiGoogleanalytics size={ICON_SIZE} />,
-  },
-  { name: "WordPress", icon: <SiWordpress size={ICON_SIZE} /> },
-  { name: "Node.js", icon: <SiNodedotjs size={ICON_SIZE} /> },
+  { name: "React", IconComponent: SiReact },
+  { name: "TypeScript", IconComponent: SiTypescript },
+  { name: "Tailwind CSS", IconComponent: SiTailwindcss },
+  { name: "Bootstrap", IconComponent: FaBootstrap },
+  { name: "DaisyUI", IconComponent: IoFlower },
+  { name: "Axios", IconComponent: SiAxios },
+  { name: "Supabase", IconComponent: SiSupabase },
+  { name: "Zustand", IconComponent: RiBearSmileFill },
+  { name: "Clerk", IconComponent: SiClerk },
+  { name: "Zod", IconComponent: SiZod },
+  { name: "Strapi", IconComponent: SiStrapi },
+  { name: "Git", IconComponent: SiGit },
+  { name: "Figma", IconComponent: SiFigma },
+  { name: "Vercel", IconComponent: SiVercel },
+  { name: "Google Analytics", IconComponent: SiGoogleanalytics },
+  { name: "WordPress", IconComponent: SiWordpress },
+  { name: "Node.js", IconComponent: SiNodedotjs },
 ];
 
 export const Technology = () => {
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="py-12 md:py-24 overflow-hidden">
       <ThreeDScrollTriggerContainer>
         <ThreeDScrollTriggerRow
-          className="pb-20"
+          className="pb-10 md:pb-20"
           baseVelocity={2}
           direction={1}
         >
           <div className="flex">
             {technologies.map((tech) => (
               <div
-                className="flex flex-col items-center mx-8 hover:text-black cursor-pointer text-gray-300"
+                className="flex flex-col items-center mx-4 md:mx-8 hover:text-black cursor-pointer text-gray-300"
                 key={tech.name}
               >
-                <div className="p-16 rounded-full flex flex-col items-center ">
-                  <span className="mb-4">{tech.icon}</span>
+                <div className="p-6 md:p-16 rounded-full flex flex-col items-center">
+                  <span className="mb-2 md:mb-4 w-12 h-12 md:w-[120px] md:h-[120px] flex items-center justify-center">
+                    <tech.IconComponent size={60} />
+                  </span>
                 </div>
-                <small>{tech.name}</small>
+                <small className="text-xs md:text-sm">{tech.name}</small>
               </div>
             ))}
           </div>

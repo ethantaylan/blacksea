@@ -21,32 +21,40 @@ export const UnderHero = () => {
   ];
 
   return (
-    <section className="min-h-[300px] h-[500px] text-white py-12">
+    <section className="min-h-[300px] h-auto md:h-[500px] text-white py-6 md:py-12 px-4 md:px-0">
       <motion.div
-        className="shadow-xl bg-black rounded-3xl p-8"
+        className="shadow-xl bg-black rounded-3xl p-4 md:p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <video className="rounded-3xl" autoPlay loop muted>
+            <video
+              className="rounded-3xl w-full h-auto"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
               <source src={Waves} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>
 
-          {infos.map((i) => (
-            <InformationCard
-              key={i.title}
-              title={i.title}
-              description={i.description}
-            />
-          ))}
+          <div className="col-span-1 md:col-span-3 flex flex-col md:flex-row justify-between items-center md:items-stretch gap-10 md:gap-8">
+            {infos.map((i) => (
+              <InformationCard
+                key={i.title}
+                title={i.title}
+                description={i.description}
+              />
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>

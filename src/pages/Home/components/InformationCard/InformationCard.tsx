@@ -16,7 +16,7 @@ export const InformationCard = ({
       transition={{ duration: 0.8, delay: 0.6 }}
       className="text-center md:text-left"
     >
-      <p className="text-sm text-gray-400 mb-2">{title}</p>
+      <p className="text-sm text-gray-500 mb-2">{title}</p>
       <p className="text-xl">{description}</p>
     </motion.div>
   );

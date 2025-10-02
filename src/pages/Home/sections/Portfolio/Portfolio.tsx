@@ -56,7 +56,7 @@ const projects: Project[] = [
 
 export const Portfolio = () => {
   return (
-    <section className="min-h-screen bg-white">
+    <section className="min-h-screen bg-white px-4 md:px-0">
       <MidText
         title={"Découvrez nos projets"}
         subtitle={
@@ -64,13 +64,13 @@ export const Portfolio = () => {
         }
       />
 
-      <h1 className="text-xl my-10">Nos projects phare</h1>
+      <h1 className="text-lg md:text-xl my-6 md:my-10">Nos projects phare</h1>
 
-      <div className="flex gap-2 mb-2 overflow-x-auto pb-4">
+      <div className="flex gap-2 mb-4 md:mb-2 overflow-x-auto pb-4 scrollbar-hide">
         {categories.map((category, index) => (
           <motion.button
             key={category}
-            className="btn rounded-2xl whitespace-nowrap"
+            className="btn btn-sm md:btn-md rounded-2xl whitespace-nowrap text-xs md:text-base"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -80,7 +80,7 @@ export const Portfolio = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
         {projects.map((project, index: number) => (
           <div
             key={project.id}
@@ -106,20 +106,20 @@ export const Portfolio = () => {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <p className="text-sm text-gray-300">{project.client}</p>
-                <h3 className="text-xl font-light text-white mb-2">
+              <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end">
+                <p className="text-xs md:text-sm text-gray-300">{project.client}</p>
+                <h3 className="text-lg md:text-xl font-light text-white mb-1 md:mb-2">
                   {project.title}
                 </h3>
-                <p className="text-sm text-gray-300 mb-4">
+                <p className="text-xs md:text-sm text-gray-300 mb-2 md:mb-4 line-clamp-2">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 md:gap-2">
                   {project.tags.map((tag: string) => (
                     <span
                       key={tag}
-                      className="text-xs px-3 py-1 bg-white/10 rounded-full text-white"
+                      className="text-[10px] md:text-xs px-2 md:px-3 py-0.5 md:py-1 bg-white/10 rounded-full text-white"
                     >
                       {tag}
                     </span>

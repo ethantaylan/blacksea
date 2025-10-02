@@ -6,10 +6,10 @@ import { Collapse } from "../../components/Collapse/Collapse";
 
 export default function Services() {
   return (
-    <motion.section>
-      <h1 className="text-xl my-10">Services</h1>
+    <motion.section className="px-4 md:px-0">
+      <h1 className="text-lg md:text-xl my-6 md:my-10">Services</h1>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4 md:gap-8">
         {services.map((service) => (
           <>
             <div>
@@ -20,7 +20,7 @@ export default function Services() {
                   <motion.a
                     key={item.title}
                     href={item.url}
-                    className="block py-3"
+                    className="block py-2 md:py-3 text-sm md:text-base"
                   >
                     {item.title}
                   </motion.a>
