@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { menus } from "../../consts";
@@ -9,8 +9,11 @@ export function Navbar() {
 
   return (
     <div className="w-full flex justify-center relative p-2 md:p-4">
-      <div className="flex fixed w-11/12 md:w-6/12 items-center justify-between md:justify-center h-16 md:h-20 rounded-3xl bg-transparent z-50 backdrop-blur bg-blend-difference px-3 md:px-4">
-        <NavLink className="text-xl md:text-2xl font-bold cursor-pointer md:w-full" to="/">
+      <div className="flex w-full items-center justify-between md:justify-center h-16 md:h-20 rounded-3xl bg-transparent z-50 backdrop-blur bg-blend-difference">
+        <NavLink
+          className="text-xl md:text-2xl font-bold cursor-pointer md:w-full"
+          to="/"
+        >
           {/* <img src={BlackseaLogo} className="invert object-contain h-11 antialiased" alt="blacksea" /> */}
           blacksea
         </NavLink>
@@ -73,7 +76,8 @@ export function Navbar() {
                   href={menuItem.link}
                   className={clsx(
                     "text-2xl font-medium",
-                    menuItem.name === "Contact" && "bg-black text-white px-8 py-3 rounded-full"
+                    menuItem.name === "Contact" &&
+                      "bg-black text-white px-8 py-3 rounded-full"
                   )}
                   onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, y: 20 }}
