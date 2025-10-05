@@ -11,11 +11,15 @@ export function Navbar() {
     <div className="w-full flex justify-center relative">
       <div className="flex w-full items-center justify-between md:justify-center h-16 md:h-20 rounded-3xl bg-transparent z-50 backdrop-blur bg-blend-difference">
         <NavLink
-          className="text-xl md:text-2xl font-bold cursor-pointer md:w-full"
+          className="text-xl md:text-2xl font-black cursor-pointer md:w-full"
           to="/"
         >
-          {/* <img src={BlackseaLogo} className="invert object-contain h-11 antialiased" alt="blacksea" /> */}
-          blacksea
+          {/* <img
+            src={BlackseaLogo}
+            className="invert object-contain h-11 antialiased"
+            alt="blacksea"
+          /> */}
+          BLACKSEA
         </NavLink>
 
         {/* Desktop Menu */}

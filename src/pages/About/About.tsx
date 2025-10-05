@@ -8,6 +8,8 @@ export default function About() {
         title={"Nous, nos valeurs, nos missions"}
         subtitle={"Découvrez qui nous sommes et ce que nous défendons."}
       />
+
+      <h1>FAQ part</h1>
     </div>
   );
 }
