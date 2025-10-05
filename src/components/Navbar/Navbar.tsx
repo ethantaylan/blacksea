@@ -8,7 +8,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full flex justify-center relative p-2 md:p-4">
+    <div className="w-full flex justify-center relative">
       <div className="flex w-full items-center justify-between md:justify-center h-16 md:h-20 rounded-3xl bg-transparent z-50 backdrop-blur bg-blend-difference">
         <NavLink
           className="text-xl md:text-2xl font-bold cursor-pointer md:w-full"
