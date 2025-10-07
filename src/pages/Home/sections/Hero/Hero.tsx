@@ -19,7 +19,7 @@ export function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <motion.h1
-          className="relative text-5xl sm:text-7xl md:text-9xl lg:text-[200px] font-black uppercase leading-tight"
+          className="relative text-5xl sm:text-7xl md:text-9xl lg:text-[150px] font-black uppercase leading-tight"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}

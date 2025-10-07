@@ -23,7 +23,7 @@ export const UnderHero = () => {
   return (
     <section className="min-h-[300px] h-auto md:h-[500px] text-white py-6 md:py-12 px-4 md:px-0">
       <motion.div
-        className="shadow-xl bg-black rounded-3xl p-4 md:p-8"
+        className="shadow-xl bg-black rounded-3xl p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
