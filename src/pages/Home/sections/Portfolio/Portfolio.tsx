@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Header } from "../../../../components/Header/Header";
 import { MidText } from "../../../../components/MidText/MidText";
 
 interface Project {
@@ -64,8 +65,8 @@ export const Portfolio = () => {
         }
       />
 
-      <h1 className="text-lg md:text-xl my-6 md:my-10">Nos projects phare</h1>
-
+      <Header title="Nos projets phare" />
+      
       <div className="flex gap-2 mb-4 md:mb-2 overflow-x-auto pb-4 scrollbar-hide">
         {categories.map((category, index) => (
           <motion.button
@@ -107,7 +108,9 @@ export const Portfolio = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
               <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end">
-                <p className="text-xs md:text-sm text-gray-300">{project.client}</p>
+                <p className="text-xs md:text-sm text-gray-300">
+                  {project.client}
+                </p>
                 <h3 className="text-lg md:text-xl font-light text-white mb-1 md:mb-2">
                   {project.title}
                 </h3>

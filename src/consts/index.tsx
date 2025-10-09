@@ -87,10 +87,7 @@ export const services = [
 ];
 
 export const menus = [
-  { name: "À propos", link: "/about" },
-  { name: "Services", link: "/services" },
-  { name: "Équipe", link: "/team" },
-  { name: "Contact", link: "/contact" },
+  { name: "Contact", link: "#" },
 ];
 
 export const socials = [

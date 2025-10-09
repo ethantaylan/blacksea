@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
 
 import { motion } from "framer-motion";
+import { Header } from "../../../../components/Header/Header";
 import { services } from "../../../../consts";
 import { Collapse } from "../../components/Collapse/Collapse";
 
 export default function Services() {
   return (
     <motion.section className="px-4 md:px-0">
-      <h1 className="text-lg md:text-xl my-6 md:my-10">Services</h1>
-
+      <Header title="Services" />
+      
       <div className="flex flex-col gap-4 md:gap-8">
         {services.map((service) => (
           <>

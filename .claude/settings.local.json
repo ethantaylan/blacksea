@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Read(//c/Users/ethan/Desktop/dev/**)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(node_modules/.bin/tailwindcss:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
