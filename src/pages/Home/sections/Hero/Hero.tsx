@@ -1,9 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import { DotBackground } from "../../../../components/DotBackground/DotBackground";
+import { useLanguage } from "../../../../contexts/LanguageContext";
 
 export function Hero() {
+  const navigate = useNavigate();
+  const { t } = useLanguage();
+
   return (
     <motion.section
       className="hero h-screen relative"
@@ -24,7 +29,7 @@ export function Hero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          BLACKSEA
+          {t.hero.title}
         </motion.h1>
 
         <motion.p
@@ -33,8 +38,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Votre partenaire digital pour des solutions web innovantes. Donnez vie
-          à vos projets et démarquez-vous sur le marché.
+          {t.hero.subtitle}
         </motion.p>
 
         <motion.div
@@ -48,14 +52,15 @@ export function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact <MdOutlineArrowOutward size={22} />
+            {t.hero.contactBtn} <MdOutlineArrowOutward size={22} />
           </motion.button>
           <motion.button
             className="btn w-full sm:w-56 btn-lg rounded-full mt-8"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/works")}
           >
-            Réalisations
+            {t.hero.worksBtn}
           </motion.button>
         </motion.div>
       </motion.div>

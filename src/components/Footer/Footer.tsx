@@ -2,21 +2,22 @@
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { socials } from "../../consts";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-black h-auto md:h-[600px] text-white pt-12 md:pt-20 pb-4 px-4 md:px-0 items-center flex flex-col justify-between">
       <div className="container flex flex-col md:flex-row justify-between gap-8 md:gap-0">
         <div className="w-full">
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-light mb-8 md:mb-12"
+            className="text-3xl sm:text-4xl md:text-5xl font-light mb-8 md:mb-12 whitespace-pre-line"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Let's start
-            <br />
-            creating together
+            {t.footer.title}
           </motion.h2>
 
           <motion.button
@@ -24,7 +25,7 @@ export function Footer() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact <MdOutlineArrowOutward size={22} />
+            {t.footer.contactBtn} <MdOutlineArrowOutward size={22} />
           </motion.button>
         </div>
 
@@ -69,7 +70,7 @@ export function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          © 2025 BLACKSEA. Tous droits réservés.
+          {t.footer.copyright}
         </motion.p>
       </div>
     </footer>

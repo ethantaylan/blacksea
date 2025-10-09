@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Instagram, Linkedin, Twitter, X } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface ContactPopupProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface ContactPopupProps {
 }
 
 export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -63,11 +65,10 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
             {/* Header */}
             <div className="mb-6 md:mb-8">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
-                Contactez-nous
+                {t.contact.title}
               </h2>
               <p className="text-sm md:text-base text-gray-400">
-                Parlons de votre projet et découvrons comment nous pouvons vous
-                aider.
+                {t.contact.subtitle}
               </p>
             </div>
 
@@ -78,7 +79,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                   htmlFor="name"
                   className="block text-sm font-medium mb-2 text-gray-400"
                 >
-                  Nom complet
+                  {t.contact.fullName}
                 </label>
                 <input
                   type="text"
@@ -88,7 +89,6 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2.5 md:px-4 md:py-3 text-sm md:text-base bg-neutral-900 border border-neutral-800 rounded-xl focus:outline-none focus:border-white transition-colors text-white"
-                  placeholder="Jean Dupont"
                 />
               </div>
 
@@ -97,7 +97,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                   htmlFor="email"
                   className="block text-sm font-medium mb-2 text-gray-400"
                 >
-                  Email
+                  {t.contact.email}
                 </label>
                 <input
                   type="email"
@@ -107,7 +107,6 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2.5 md:px-4 md:py-3 text-sm md:text-base bg-neutral-900 border border-neutral-800 rounded-xl focus:outline-none focus:border-white transition-colors text-white"
-                  placeholder="jean.dupont@exemple.fr"
                 />
               </div>
 
@@ -116,7 +115,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2 text-gray-400"
                 >
-                  Message
+                  {t.contact.message}
                 </label>
                 <textarea
                   id="message"
@@ -126,7 +125,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-neutral-900 border border-neutral-800 rounded-xl focus:outline-none focus:border-white transition-colors text-white resize-none"
-                  placeholder="Parlez-nous de votre projet..."
+                  placeholder={t.contact.messagePlaceholder}
                 />
               </div>
 
@@ -136,7 +135,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-white text-black font-semibold py-3 md:py-4 px-6 md:px-8 text-sm md:text-base rounded-xl hover:bg-gray-100 transition-colors cursor-pointer"
               >
-                Envoyer le message
+                {t.contact.sendBtn}
               </motion.button>
             </form>
 
@@ -147,7 +146,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
               </div>
               <div className="relative flex justify-center text-xs md:text-sm">
                 <span className="bg-black px-4 md:px-6 text-gray-500 uppercase tracking-wider font-medium">
-                  Rejoignez-nous
+                  {t.contact.joinUs}
                 </span>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../../../contexts/LanguageContext";
 import { Header } from "../../../../components/Header/Header";
 import { MidText } from "../../../../components/MidText/MidText";
 
@@ -10,13 +11,6 @@ interface Project {
   image: string;
   tags: string[];
 }
-
-const categories = [
-  "Web Design",
-  "Branding & Identity",
-  "Digital Marketing & Strategy",
-  "Content Creation",
-];
 
 const projects: Project[] = [
   {
@@ -56,18 +50,25 @@ const projects: Project[] = [
 ];
 
 export const Portfolio = () => {
+  const { t } = useLanguage();
+
+  const categories = [
+    t.works.categories.webDesign,
+    t.works.categories.branding,
+    t.works.categories.marketing,
+    t.works.categories.content,
+  ];
+
   return (
     <section className="min-h-screen bg-white px-4 md:px-0">
       <MidText
-        title={"Découvrez nos projets"}
-        subtitle={
-          "Plongez dans les histoires de conceptions de produits réussies qui font la différence."
-        }
+        title={t.portfolio.title}
+        subtitle={t.portfolio.subtitle}
       />
 
-      <Header title="Nos projets phare" />
+      <Header title={t.portfolio.ourProjects} />
 
-      <div className="flex gap-2 mb-4 md:mb-2 overflow-x-auto pb-4 scrollbar-hide">
+      <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
         {categories.map((category, index) => (
           <motion.button
             key={category}
