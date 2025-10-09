@@ -66,7 +66,7 @@ export const Portfolio = () => {
       />
 
       <Header title="Nos projets phare" />
-      
+
       <div className="flex gap-2 mb-4 md:mb-2 overflow-x-auto pb-4 scrollbar-hide">
         {categories.map((category, index) => (
           <motion.button

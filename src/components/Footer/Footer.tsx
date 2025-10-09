@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
-import { menus, socials } from "../../consts";
+import { socials } from "../../consts";
 
 export function Footer() {
   return (
@@ -28,8 +28,8 @@ export function Footer() {
           </motion.button>
         </div>
 
-        <div className="grid grid-cols-2 md:flex md:justify-between w-full md:w-2/4 items-start gap-8 md:gap-0">
-          <div className="space-y-3 md:space-y-4">
+        {/* <div className="grid grid-cols-2 md:flex md:justify-between w-full md:w-2/4 items-start gap-8 md:gap-0"> */}
+        {/* <div className="space-y-3 md:space-y-4">
             {menus.map((item, index) => (
               <motion.a
                 key={item.link}
@@ -42,24 +42,23 @@ export function Footer() {
                 {item.name}
               </motion.a>
             ))}
-          </div>
+          </div> */}
 
-          <div className="space-y-3 md:space-y-4">
-            {socials.map((item) => (
-              <motion.a
-                key={item.name}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                className="flex justify-between w-full md:w-40 items-center gap-2 hover:gap-4 transition-all hover:text-gray-300 text-sm md:text-base"
-              >
-                {item.name} <MdOutlineArrowOutward />
-              </motion.a>
-
-            ))}
-          </div>
+        <div className="space-y-3 md:space-y-4">
+          {socials.map((item) => (
+            <motion.a
+              key={item.name}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="flex justify-between md:w-40 items-center gap-2 hover:gap-4 transition-all hover:text-gray-300 text-sm md:text-base"
+            >
+              {item.name} <MdOutlineArrowOutward />
+            </motion.a>
+          ))}
+          {/* </div> */}
         </div>
       </div>
 
