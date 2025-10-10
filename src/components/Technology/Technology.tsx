@@ -27,26 +27,51 @@ import {
 type TechnologyItem = {
   name: string;
   IconComponent: React.ComponentType<{ size: number }>;
+  url: string;
 };
 
 const technologies: TechnologyItem[] = [
-  { name: "React", IconComponent: SiReact },
-  { name: "TypeScript", IconComponent: SiTypescript },
-  { name: "Tailwind CSS", IconComponent: SiTailwindcss },
-  { name: "Bootstrap", IconComponent: FaBootstrap },
-  { name: "DaisyUI", IconComponent: IoFlower },
-  { name: "Axios", IconComponent: SiAxios },
-  { name: "Supabase", IconComponent: SiSupabase },
-  { name: "Zustand", IconComponent: RiBearSmileFill },
-  { name: "Clerk", IconComponent: SiClerk },
-  { name: "Zod", IconComponent: SiZod },
-  { name: "Strapi", IconComponent: SiStrapi },
-  { name: "Git", IconComponent: SiGit },
-  { name: "Figma", IconComponent: SiFigma },
-  { name: "Vercel", IconComponent: SiVercel },
-  { name: "Google Analytics", IconComponent: SiGoogleanalytics },
-  { name: "WordPress", IconComponent: SiWordpress },
-  { name: "Node.js", IconComponent: SiNodedotjs },
+  { name: "React", IconComponent: SiReact, url: "https://react.dev" },
+  {
+    name: "TypeScript",
+    IconComponent: SiTypescript,
+    url: "https://www.typescriptlang.org",
+  },
+  {
+    name: "Tailwind CSS",
+    IconComponent: SiTailwindcss,
+    url: "https://tailwindcss.com",
+  },
+  {
+    name: "Bootstrap",
+    IconComponent: FaBootstrap,
+    url: "https://getbootstrap.com",
+  },
+  { name: "DaisyUI", IconComponent: IoFlower, url: "https://daisyui.com" },
+  { name: "Axios", IconComponent: SiAxios, url: "https://axios-http.com" },
+  { name: "Supabase", IconComponent: SiSupabase, url: "https://supabase.com" },
+  {
+    name: "Zustand",
+    IconComponent: RiBearSmileFill,
+    url: "https://zustand-demo.pmnd.rs",
+  },
+  { name: "Clerk", IconComponent: SiClerk, url: "https://clerk.com" },
+  { name: "Zod", IconComponent: SiZod, url: "https://zod.dev" },
+  { name: "Strapi", IconComponent: SiStrapi, url: "https://strapi.io" },
+  { name: "Git", IconComponent: SiGit, url: "https://git-scm.com" },
+  { name: "Figma", IconComponent: SiFigma, url: "https://www.figma.com" },
+  { name: "Vercel", IconComponent: SiVercel, url: "https://vercel.com" },
+  {
+    name: "Google Analytics",
+    IconComponent: SiGoogleanalytics,
+    url: "https://analytics.google.com",
+  },
+  {
+    name: "WordPress",
+    IconComponent: SiWordpress,
+    url: "https://wordpress.org",
+  },
+  { name: "Node.js", IconComponent: SiNodedotjs, url: "https://nodejs.org" },
 ];
 
 export const Technology = () => {
@@ -60,7 +85,10 @@ export const Technology = () => {
         >
           <div className="flex">
             {technologies.map((tech) => (
-              <div
+              <a
+                href={tech.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-col items-center mx-4 md:mx-8 hover:text-black cursor-pointer text-gray-300"
                 key={tech.name}
               >
@@ -70,7 +98,7 @@ export const Technology = () => {
                   </span>
                 </div>
                 <small className="text-xs md:text-sm">{tech.name}</small>
-              </div>
+              </a>
             ))}
           </div>
         </ThreeDScrollTriggerRow>

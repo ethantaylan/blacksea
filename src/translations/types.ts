@@ -5,6 +5,7 @@ export enum Language {
 
 export interface Translations {
   common: {
+    home: string
     contact: string;
     works: string;
     services: string;
@@ -65,6 +66,13 @@ export interface Translations {
     title: string;
     subtitle: string;
     ourProjects: string;
+    projects: {
+      [key: string]: {
+        description: string;
+        challenge: string;
+        solution: string;
+      };
+    };
   };
   methodology: {
     sectionTitle: string;

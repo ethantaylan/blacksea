@@ -9,6 +9,7 @@ export const fr: Translations = {
     close: "Fermer",
     send: "Envoyer",
     all: "Tous",
+    home: "Accueil"
   },
   nav: {
     works: "Réalisations",
@@ -82,6 +83,48 @@ export const fr: Translations = {
     subtitle:
       "Plongez dans les histoires de conceptions de produits réussies qui font la différence.",
     ourProjects: "Nos projets phare",
+    projects: {
+      learnify: {
+        description: "Création d'une identité visuelle raffinée et mémorable qui résonne avec le public de la marque.",
+        challenge: "Créer une plateforme éducative engageante qui se démarque sur un marché saturé tout en maintenant simplicité et facilité d'utilisation.",
+        solution: "Nous avons conçu une interface claire et intuitive avec des éléments ludiques qui rendent l'apprentissage excitant. L'identité de marque utilise des couleurs vives et une typographie moderne pour séduire étudiants et éducateurs.",
+      },
+      coworkingSpace: {
+        description: "Solution d'espace de travail moderne avec un design axé sur la communauté",
+        challenge: "Établir une identité unique sur le marché compétitif des espaces de coworking en mettant l'accent sur la communauté et la collaboration.",
+        solution: "Développement d'une marque chaleureuse et accueillante qui met en valeur les liens humains. Le système de design équilibre professionnalisme et accessibilité à travers des formes organiques et des palettes de couleurs naturelles.",
+      },
+      creativeStudio: {
+        description: "Environnement créatif collaboratif pour artistes et designers",
+        challenge: "Mettre en valeur des travaux créatifs diversifiés tout en maintenant une expérience de marque cohérente qui n'éclipse pas les artistes.",
+        solution: "Création d'un système de portfolio minimaliste qui met l'œuvre d'art en premier. L'interface s'adapte aux différents types de médias tout en maintenant une navigation et une expérience utilisateur cohérentes.",
+      },
+      digitalAgency: {
+        description: "Espace de travail et branding d'agence digitale moderne",
+        challenge: "Positionner une nouvelle agence comme un acteur crédible dans l'espace digital avec des ressources limitées et sans portfolio préalable.",
+        solution: "Construction d'une forte présence digitale à travers du marketing de contenu stratégique et des médias sociaux. L'identité de marque reflète l'innovation et l'expertise à travers des choix de design audacieux.",
+      },
+      ecommercePlatform: {
+        description: "Expérience d'achat nouvelle génération avec paiement fluide",
+        challenge: "Réduire les taux d'abandon de panier tout en offrant une expérience d'achat rapide et sécurisée sur tous les appareils.",
+        solution: "Mise en place d'un paiement en un clic, technologie d'application web progressive et recommandations de produits intelligentes. Le résultat est une augmentation de 40% des taux de conversion.",
+      },
+      restaurantChain: {
+        description: "Transformation digitale pour une chaîne de restaurants multi-sites",
+        challenge: "Unifier l'expérience digitale à travers plusieurs emplacements tout en permettant une personnalisation et des préférences locales.",
+        solution: "Développement d'une plateforme évolutive avec gestion centralisée et fonctionnalités spécifiques aux emplacements. Intégration de récompenses de fidélité et commande fluide sur web et mobile.",
+      },
+      fitnessTracker: {
+        description: "Application de fitness et bien-être alimentée par l'IA",
+        challenge: "Rendre les données complexes de fitness actionnables et motivantes pour les utilisateurs de tous niveaux.",
+        solution: "Création d'une interface adaptative qui personnalise l'expérience en fonction des objectifs et progrès de l'utilisateur. Des insights pilotés par l'IA fournissent motivation et suggestions d'entraînement opportunes.",
+      },
+      realEstatePortal: {
+        description: "Plateforme moderne de recherche et gestion immobilière",
+        challenge: "Simplifier le processus complexe de recherche immobilière tout en fournissant des informations détaillées et des expériences immersives.",
+        solution: "Construction d'un moteur de recherche intelligent avec filtres et intégration de carte. Ajout de visites virtuelles 3D et recommandations de propriétés alimentées par l'IA basées sur les préférences des utilisateurs.",
+      },
+    },
   },
   methodology: {
     sectionTitle: "Notre démarche",

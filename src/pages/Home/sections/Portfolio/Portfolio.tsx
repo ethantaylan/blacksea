@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useLanguage } from "../../../../contexts/LanguageContext";
 import { Header } from "../../../../components/Header/Header";
 import { MidText } from "../../../../components/MidText/MidText";
@@ -10,6 +11,7 @@ interface Project {
   description: string;
   image: string;
   tags: string[];
+  category: "webDesign" | "branding" | "marketing" | "content";
 }
 
 const projects: Project[] = [
@@ -21,6 +23,7 @@ const projects: Project[] = [
       "Crafting a refined and memorable visual identity that resonates with the brand's audience.",
     image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
     tags: ["Branding", "UI/UX", "Education"],
+    category: "webDesign",
   },
   {
     id: 2,
@@ -30,6 +33,7 @@ const projects: Project[] = [
     image:
       "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg",
     tags: ["Interior", "Community", "Design"],
+    category: "branding",
   },
   {
     id: 3,
@@ -38,6 +42,7 @@ const projects: Project[] = [
     description: "Collaborative creative environment for artists and designers",
     image: "https://images.pexels.com/photos/7256897/pexels-photo-7256897.jpeg",
     tags: ["Studio", "Creative", "Design"],
+    category: "content",
   },
   {
     id: 4,
@@ -46,18 +51,25 @@ const projects: Project[] = [
     description: "Modern digital agency workspace and branding",
     image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
     tags: ["Agency", "Digital", "Branding"],
+    category: "marketing",
   },
 ];
 
 export const Portfolio = () => {
   const { t } = useLanguage();
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const categories = [
-    t.works.categories.webDesign,
-    t.works.categories.branding,
-    t.works.categories.marketing,
-    t.works.categories.content,
+    { key: "all", label: t.works.categories.all },
+    { key: "webDesign", label: t.works.categories.webDesign },
+    { key: "branding", label: t.works.categories.branding },
+    { key: "marketing", label: t.works.categories.marketing },
+    { key: "content", label: t.works.categories.content },
   ];
+
+  const filteredProjects = selectedCategory && selectedCategory !== "all"
+    ? projects.filter((project) => project.category === selectedCategory)
+    : projects;
 
   return (
     <section className="min-h-screen bg-white px-4 md:px-0">
@@ -71,19 +83,20 @@ export const Portfolio = () => {
       <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
         {categories.map((category, index) => (
           <motion.button
-            key={category}
+            key={category.key}
             className="btn btn-sm md:btn-md rounded-2xl whitespace-nowrap text-xs md:text-base"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
+            onClick={() => setSelectedCategory(category.key)}
           >
-            {category}
+            {category.label}
           </motion.button>
         ))}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
-        {projects.map((project, index: number) => (
+        {filteredProjects.map((project, index: number) => (
           <div
             key={project.id}
             className="items-center hover:scale-105 duration-200 cursor-pointer"
@@ -116,7 +129,7 @@ export const Portfolio = () => {
                   {project.title}
                 </h3>
                 <p className="text-xs md:text-sm text-gray-300 mb-2 md:mb-4 line-clamp-2">
-                  {project.description}
+                  {t.portfolio.projects[project.translationKey]?.description}
                 </p>
 
                 <div className="flex flex-wrap gap-1 md:gap-2">

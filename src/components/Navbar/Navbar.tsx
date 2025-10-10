@@ -70,7 +70,7 @@ export function Navbar() {
                       onClick={() => setIsMenuOpen(false)}
                       className="text-5xl md:text-7xl font-bold hover:text-gray-400 transition-colors"
                     >
-                      Home
+                      {t.common.home}
                     </NavLink>
                   </motion.li>
                   <motion.li

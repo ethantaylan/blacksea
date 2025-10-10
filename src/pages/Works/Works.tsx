@@ -9,19 +9,19 @@ import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function Works() {
   const { t } = useLanguage();
-  const [selectedCategory, setSelectedCategory] = useState(t.works.categories.all);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const categories = [
-    t.works.categories.all,
-    t.works.categories.webDesign,
-    t.works.categories.branding,
-    t.works.categories.marketing,
-    t.works.categories.content,
+    { key: "all", label: t.works.categories.all },
+    { key: "webDesign", label: t.works.categories.webDesign },
+    { key: "branding", label: t.works.categories.branding },
+    { key: "marketing", label: t.works.categories.marketing },
+    { key: "content", label: t.works.categories.content },
   ];
 
   const filteredProjects =
-    selectedCategory === t.works.categories.all
+    selectedCategory === "all"
       ? portfolioProjects
       : portfolioProjects.filter(
           (project) => project.category === selectedCategory
@@ -66,7 +66,6 @@ export default function Works() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <div className="w-px h-20 md:h-24 bg-black" />
                 <div className="flex-1">
                   <p className="text-lg md:text-xl text-gray-600 max-w-lg leading-relaxed">
                     {t.works.description}
@@ -76,7 +75,7 @@ export default function Works() {
             </motion.div>
 
             {/* Right side - Visual showcase */}
-            <motion.div
+            {/* <motion.div
               className="lg:col-span-5 relative"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -107,15 +106,10 @@ export default function Works() {
                         <p className="text-gray-300 text-xs">{project.client}</p>
                       </div>
                     </div>
-
-                    {/* Number indicator */}
-                    <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-xs font-bold">
-                      {index + 1}
-                    </div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </motion.section>
@@ -126,16 +120,16 @@ export default function Works() {
         <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
           {categories.map((category, index) => (
             <motion.button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
+              key={category.key}
+              onClick={() => setSelectedCategory(category.key)}
               className={`btn btn-sm md:btn-md rounded-2xl whitespace-nowrap text-xs md:text-base ${
-                selectedCategory === category ? "btn-primary" : ""
+                selectedCategory === category.key ? "btn-primary" : ""
               }`}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              {category}
+              {category.label}
             </motion.button>
           ))}
         </div>
@@ -180,7 +174,7 @@ export default function Works() {
                     {project.title}
                   </h3>
                   <p className="text-xs md:text-sm text-gray-300 mb-2 md:mb-4 line-clamp-2">
-                    {project.description}
+                    {t.portfolio.projects[project.translationKey]?.description}
                   </p>
 
                   <div className="flex flex-wrap gap-1 md:gap-2">
@@ -247,7 +241,7 @@ export default function Works() {
                   <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
                     {t.works.projectDetails.description}
                   </h3>
-                  <p className="text-lg text-gray-800">{project.description}</p>
+                  <p className="text-lg text-gray-800">{t.portfolio.projects[project.translationKey]?.description}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -281,14 +275,14 @@ export default function Works() {
                   <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
                     {t.works.projectDetails.challenge}
                   </h3>
-                  <p className="text-gray-700">{project.challenge}</p>
+                  <p className="text-gray-700">{t.portfolio.projects[project.translationKey]?.challenge}</p>
                 </div>
 
                 <div>
                   <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
                     {t.works.projectDetails.solution}
                   </h3>
-                  <p className="text-gray-700">{project.solution}</p>
+                  <p className="text-gray-700">{t.portfolio.projects[project.translationKey]?.solution}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2 pt-4">

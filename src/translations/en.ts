@@ -9,6 +9,7 @@ export const en: Translations = {
     close: "Close",
     send: "Send",
     all: "All",
+    home: "Home"
   },
   nav: {
     works: "Works",
@@ -82,6 +83,48 @@ export const en: Translations = {
     subtitle:
       "Dive into successful product design stories that make a difference.",
     ourProjects: "Our flagship projects",
+    projects: {
+      learnify: {
+        description: "Crafting a refined and memorable visual identity that resonates with the brand's audience.",
+        challenge: "Creating an engaging educational platform that stands out in a crowded market while maintaining simplicity and ease of use.",
+        solution: "We designed a clean, intuitive interface with playful elements that make learning feel exciting. The brand identity uses vibrant colors and modern typography to appeal to both students and educators.",
+      },
+      coworkingSpace: {
+        description: "Modern workspace solution with community-driven design",
+        challenge: "Establishing a unique identity in the competitive coworking space market while emphasizing community and collaboration.",
+        solution: "Developed a warm, welcoming brand that highlights human connection. The design system balances professionalism with approachability through organic shapes and natural color palettes.",
+      },
+      creativeStudio: {
+        description: "Collaborative creative environment for artists and designers",
+        challenge: "Showcasing diverse creative work while maintaining a cohesive brand experience that doesn't overshadow the artists.",
+        solution: "Created a minimalist portfolio system that puts the artwork first. The interface adapts to different media types while maintaining consistent navigation and user experience.",
+      },
+      digitalAgency: {
+        description: "Modern digital agency workspace and branding",
+        challenge: "Positioning a new agency as a credible player in the digital space with limited resources and no previous portfolio.",
+        solution: "Built a strong digital presence through strategic content marketing and social media. The brand identity reflects innovation and expertise through bold design choices.",
+      },
+      ecommercePlatform: {
+        description: "Next-generation shopping experience with seamless checkout",
+        challenge: "Reducing cart abandonment rates while providing a fast, secure shopping experience across all devices.",
+        solution: "Implemented one-click checkout, progressive web app technology, and smart product recommendations. The result was a 40% increase in conversion rates.",
+      },
+      restaurantChain: {
+        description: "Digital transformation for multi-location restaurant brand",
+        challenge: "Unifying the digital experience across multiple locations while allowing for local customization and preferences.",
+        solution: "Developed a scalable platform with centralized management and location-specific features. Integrated loyalty rewards and seamless ordering across web and mobile.",
+      },
+      fitnessTracker: {
+        description: "AI-powered fitness and wellness application",
+        challenge: "Making complex fitness data actionable and motivating for users of all fitness levels.",
+        solution: "Created an adaptive UI that personalizes the experience based on user goals and progress. AI-driven insights provide timely motivation and workout suggestions.",
+      },
+      realEstatePortal: {
+        description: "Modern property search and management platform",
+        challenge: "Simplifying the complex process of property search while providing detailed information and immersive experiences.",
+        solution: "Built an intelligent search engine with filters and map integration. Added 3D virtual tours and AI-powered property recommendations based on user preferences.",
+      },
+    },
   },
   methodology: {
     sectionTitle: "Our Approach",

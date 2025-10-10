@@ -4,11 +4,15 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { socials } from "../../consts";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-export function Footer() {
+interface FooterProps {
+  onContactClick: () => void;
+}
+
+export function Footer({ onContactClick }: FooterProps) {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-black h-auto md:h-[600px] text-white pt-12 md:pt-20 pb-4 px-4 md:px-0 items-center flex flex-col justify-between">
+    <footer className="bg-black h-auto md:h-[400px] text-white pt-12 md:pt-20 pb-4 px-4 md:px-0 items-center flex flex-col justify-between">
       <div className="container flex flex-col md:flex-row justify-between gap-8 md:gap-0">
         <div className="w-full">
           <motion.h2
@@ -24,6 +28,7 @@ export function Footer() {
             className="btn w-full sm:w-56 btn-md md:btn-lg rounded-full"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={onContactClick}
           >
             {t.footer.contactBtn} <MdOutlineArrowOutward size={22} />
           </motion.button>
