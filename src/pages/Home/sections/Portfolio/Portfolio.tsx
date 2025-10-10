@@ -12,6 +12,7 @@ interface Project {
   image: string;
   tags: string[];
   category: "webDesign" | "branding" | "marketing" | "content";
+  translationKey: string;
 }
 
 const projects: Project[] = [
@@ -24,6 +25,7 @@ const projects: Project[] = [
     image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
     tags: ["Branding", "UI/UX", "Education"],
     category: "webDesign",
+    translationKey: "learnify",
   },
   {
     id: 2,
@@ -34,6 +36,7 @@ const projects: Project[] = [
       "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg",
     tags: ["Interior", "Community", "Design"],
     category: "branding",
+    translationKey: "coworkingSpace",
   },
   {
     id: 3,
@@ -43,6 +46,7 @@ const projects: Project[] = [
     image: "https://images.pexels.com/photos/7256897/pexels-photo-7256897.jpeg",
     tags: ["Studio", "Creative", "Design"],
     category: "content",
+    translationKey: "creativeStudio",
   },
   {
     id: 4,
@@ -52,6 +56,7 @@ const projects: Project[] = [
     image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
     tags: ["Agency", "Digital", "Branding"],
     category: "marketing",
+    translationKey: "digitalAgency",
   },
 ];
 

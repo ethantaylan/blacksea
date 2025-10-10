@@ -21,7 +21,7 @@ export function Navbar() {
           BLACKSEA
         </NavLink>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-5">
           {/* Contact Button */}
           <button
             className="p-2.5 md:p-3 bg-black text-white rounded-full cursor-pointer hover:scale-105 transition-transform"
