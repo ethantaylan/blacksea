@@ -13,6 +13,7 @@ export const en: Translations = {
   },
   nav: {
     works: "Works",
+    about: "About",
     contact: "Contact",
   },
   hero: {
@@ -163,5 +164,63 @@ export const en: Translations = {
     messagePlaceholder: "Tell us about your project...",
     sendBtn: "Send message",
     joinUs: "Join us",
+  },
+  aboutUs: {
+    hero: {
+      title: "ABOUT",
+      subtitle: "Us",
+      description:
+        "We are a passionate team of digital creators dedicated to transforming ideas into exceptional digital experiences. Our mission is to help businesses thrive in the digital world.",
+    },
+    stats: {
+      projects: "Projects Delivered",
+      clients: "Happy Clients",
+      years: "Years Experience",
+      satisfaction: "Client Satisfaction",
+    },
+    story: {
+      title: "Our story",
+      paragraph1:
+        "Founded in 2020, BlackSea started with a simple vision: to bridge the gap between innovative technology and compelling design. What began as a small team of passionate creators has grown into a full-service digital agency.",
+      paragraph2:
+        "We believe that great digital products are born from the perfect balance of aesthetics and functionality. Our approach combines cutting-edge technology with human-centered design principles to create experiences that resonate with users.",
+      paragraph3:
+        "Today, we work with clients across various industries, helping them navigate the digital landscape and achieve their business goals. Our commitment to excellence and innovation drives everything we do.",
+    },
+    values: {
+      title: "Our values",
+      innovation: {
+        title: "Innovation",
+        description:
+          "We constantly push boundaries and explore new technologies to deliver cutting-edge solutions that keep our clients ahead of the curve.",
+      },
+      quality: {
+        title: "Quality",
+        description:
+          "Excellence is not an act, but a habit. We ensure every project meets the highest standards through rigorous testing and attention to detail.",
+      },
+      collaboration: {
+        title: "Collaboration",
+        description:
+          "We believe in the power of teamwork. By working closely with our clients and partners, we create solutions that truly address their needs.",
+      },
+      passion: {
+        title: "Passion",
+        description:
+          "We love what we do, and it shows. Our enthusiasm for creating exceptional digital experiences drives us to go above and beyond.",
+      },
+    },
+    team: {
+      title: "Meet our team",
+      founder: "Founder & CEO",
+      leadDesigner: "Lead Designer",
+      developer: "Senior Developer",
+      marketing: "Marketing Director",
+    },
+    mission: {
+      title: "Our mission",
+      description:
+        "To empower businesses with innovative digital solutions that not only meet their goals but exceed their expectations, creating lasting impact in the digital world.",
+    },
   },
 };

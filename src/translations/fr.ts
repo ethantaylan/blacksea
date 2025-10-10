@@ -13,6 +13,7 @@ export const fr: Translations = {
   },
   nav: {
     works: "Réalisations",
+    about: "À propos",
     contact: "Contact",
   },
   hero: {
@@ -163,5 +164,63 @@ export const fr: Translations = {
     messagePlaceholder: "Parlez-nous de votre projet...",
     sendBtn: "Envoyer le message",
     joinUs: "Rejoignez-nous",
+  },
+  aboutUs: {
+    hero: {
+      title: "À PROPOS",
+      subtitle: "De nous",
+      description:
+        "Nous sommes une équipe passionnée de créateurs digitaux dédiés à transformer les idées en expériences digitales exceptionnelles. Notre mission est d'aider les entreprises à prospérer dans le monde numérique.",
+    },
+    stats: {
+      projects: "Projets Livrés",
+      clients: "Clients Satisfaits",
+      years: "Années d'Expérience",
+      satisfaction: "Satisfaction Client",
+    },
+    story: {
+      title: "Notre histoire",
+      paragraph1:
+        "Fondée en 2020, BlackSea a commencé avec une vision simple : combler le fossé entre technologie innovante et design convaincant. Ce qui a commencé comme une petite équipe de créateurs passionnés est devenu une agence digitale complète.",
+      paragraph2:
+        "Nous croyons que les grands produits digitaux naissent de l'équilibre parfait entre esthétique et fonctionnalité. Notre approche combine technologie de pointe et principes de design centrés sur l'humain pour créer des expériences qui résonnent avec les utilisateurs.",
+      paragraph3:
+        "Aujourd'hui, nous travaillons avec des clients de diverses industries, les aidant à naviguer dans le paysage digital et à atteindre leurs objectifs commerciaux. Notre engagement envers l'excellence et l'innovation guide tout ce que nous faisons.",
+    },
+    values: {
+      title: "Nos valeurs",
+      innovation: {
+        title: "Innovation",
+        description:
+          "Nous repoussons constamment les limites et explorons de nouvelles technologies pour offrir des solutions de pointe qui gardent nos clients en avance.",
+      },
+      quality: {
+        title: "Qualité",
+        description:
+          "L'excellence n'est pas un acte, mais une habitude. Nous nous assurons que chaque projet répond aux normes les plus élevées grâce à des tests rigoureux et une attention aux détails.",
+      },
+      collaboration: {
+        title: "Collaboration",
+        description:
+          "Nous croyons au pouvoir du travail d'équipe. En travaillant étroitement avec nos clients et partenaires, nous créons des solutions qui répondent vraiment à leurs besoins.",
+      },
+      passion: {
+        title: "Passion",
+        description:
+          "Nous aimons ce que nous faisons, et cela se voit. Notre enthousiasme pour créer des expériences digitales exceptionnelles nous pousse à aller au-delà.",
+      },
+    },
+    team: {
+      title: "Notre équipe",
+      founder: "Fondateur & PDG",
+      leadDesigner: "Designer Principal",
+      developer: "Développeur Senior",
+      marketing: "Directeur Marketing",
+    },
+    mission: {
+      title: "Notre mission",
+      description:
+        "Donner aux entreprises les moyens d'agir avec des solutions digitales innovantes qui non seulement atteignent leurs objectifs mais dépassent leurs attentes, créant un impact durable dans le monde numérique.",
+    },
   },
 };

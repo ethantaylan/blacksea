@@ -16,6 +16,7 @@ export interface Translations {
   };
   nav: {
     works: string;
+    about: string;
     contact: string;
   };
   hero: {
@@ -110,5 +111,54 @@ export interface Translations {
     messagePlaceholder: string;
     sendBtn: string;
     joinUs: string;
+  };
+  aboutUs: {
+    hero: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    stats: {
+      projects: string;
+      clients: string;
+      years: string;
+      satisfaction: string;
+    };
+    story: {
+      title: string;
+      paragraph1: string;
+      paragraph2: string;
+      paragraph3: string;
+    };
+    values: {
+      title: string;
+      innovation: {
+        title: string;
+        description: string;
+      };
+      quality: {
+        title: string;
+        description: string;
+      };
+      collaboration: {
+        title: string;
+        description: string;
+      };
+      passion: {
+        title: string;
+        description: string;
+      };
+    };
+    team: {
+      title: string;
+      founder: string;
+      leadDesigner: string;
+      developer: string;
+      marketing: string;
+    };
+    mission: {
+      title: string;
+      description: string;
+    };
   };
 }
