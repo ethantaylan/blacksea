@@ -1,1 +1,0 @@
-export { TechnologyStack } from "./TechnologyStack";

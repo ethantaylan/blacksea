@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { DotBackground } from "../DotBackground/DotBackground";
-import { useContactStore } from "../../stores/contactStore";
-import { useLanguageStore } from "../../stores/languageStore";
+import { DotBackground } from "../../../../../components/DotBackground/DotBackground";
+import { useContactStore } from "../../../../../stores/contactStore";
+import { useLanguageStore } from "../../../../../stores/languageStore";
 
 export function HeroSection() {
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.button
-            className="btn w-full sm:w-56 btn-lg btn-primary rounded-full mt-8"
+            className="btn w-full sm:w-56 btn-lg btn-primary rounded-full mt-8 shadow-2xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={openContact}

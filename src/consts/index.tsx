@@ -1,3 +1,5 @@
+export const BLACKSEA = "BLACKSEA";
+
 export const services = [
   {
     title: "Website",

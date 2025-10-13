@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useLanguageStore } from "../../stores/languageStore";
-import { SectionHeader } from "../SectionHeader/SectionHeader";
-import { SectionDivider } from "../SectionDivider/SectionDivider";
+import { ProjectFilters } from "../../../../../components/ProjectFilters";
+import { SectionDivider } from "../../../../../components/SectionDivider/SectionDivider";
+import { SectionHeader } from "../../../../../components/SectionHeader/SectionHeader";
+import { useLanguageStore } from "../../../../../stores/languageStore";
 
 interface Project {
   id: number;
@@ -64,14 +65,6 @@ export const PortfolioSection = () => {
   const { t } = useLanguageStore();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const categories = [
-    { key: "all", label: t.works.categories.all },
-    { key: "webDesign", label: t.works.categories.webDesign },
-    { key: "branding", label: t.works.categories.branding },
-    { key: "marketing", label: t.works.categories.marketing },
-    { key: "content", label: t.works.categories.content },
-  ];
-
   const filteredProjects = selectedCategory && selectedCategory !== "all"
     ? projects.filter((project) => project.category === selectedCategory)
     : projects;
@@ -85,20 +78,10 @@ export const PortfolioSection = () => {
 
       <SectionHeader title={t.portfolio.ourProjects} />
 
-      <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
-        {categories.map((category, index) => (
-          <motion.button
-            key={category.key}
-            className="btn btn-sm md:btn-md rounded-2xl whitespace-nowrap text-xs md:text-base"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            onClick={() => setSelectedCategory(category.key)}
-          >
-            {category.label}
-          </motion.button>
-        ))}
-      </div>
+      <ProjectFilters
+        selectedCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
         {filteredProjects.map((project, index: number) => (

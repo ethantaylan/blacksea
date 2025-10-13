@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { DotBackground } from "../components/DotBackground/DotBackground";
-import { useLanguageStore } from "../stores/languageStore";
+import { DotBackground } from "../../components/DotBackground/DotBackground";
+import { useLanguageStore } from "../../stores/languageStore";
 
 export default function NotFound() {
   const navigate = useNavigate();

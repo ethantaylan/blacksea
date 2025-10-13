@@ -34,22 +34,6 @@ export function Footer({ onContactClick }: FooterProps) {
           </motion.button>
         </div>
 
-        {/* <div className="grid grid-cols-2 md:flex md:justify-between w-full md:w-2/4 items-start gap-8 md:gap-0"> */}
-        {/* <div className="space-y-3 md:space-y-4">
-            {menus.map((item, index) => (
-              <motion.a
-                key={item.link}
-                href={`#${item.link}`}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="block hover:text-gray-300 transition-colors text-sm md:text-base"
-              >
-                {item.name}
-              </motion.a>
-            ))}
-          </div> */}
-
         <div className="space-y-3 md:space-y-4">
           {socials.map((item) => (
             <motion.a
@@ -64,7 +48,6 @@ export function Footer({ onContactClick }: FooterProps) {
               {item.name} <MdOutlineArrowOutward />
             </motion.a>
           ))}
-          {/* </div> */}
         </div>
       </div>
 

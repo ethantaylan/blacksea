@@ -1,8 +1,8 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { X } from 'lucide-react';
-import { useLanguageStore } from '../../stores/languageStore';
-import { ContactForm } from './ContactForm';
-import { SocialLinks } from './SocialLinks';
+import { AnimatePresence, motion } from "framer-motion";
+import { X } from "lucide-react";
+import { useLanguageStore } from "../../stores/languageStore";
+import { ContactForm } from "./ContactForm";
+import { SocialLinks } from "./SocialLinks";
 
 interface ContactPopupProps {
   isOpen: boolean;
@@ -28,10 +28,10 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
           {/* Popup */}
           <motion.div
             className="fixed left-4 right-4 top-4 bottom-4 md:left-auto md:right-4 md:top-4 md:bottom-4 w-auto md:w-full md:max-w-md bg-black text-white rounded-3xl p-6 md:p-8 z-50 overflow-y-auto"
-            initial={{ x: '100%', opacity: 0 }}
+            initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: '100%', opacity: 0 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            exit={{ x: "100%", opacity: 0 }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
             {/* Close Button */}
             <button

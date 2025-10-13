@@ -7,9 +7,9 @@ import {
   MdRocketLaunch,
   MdSupportAgent,
 } from "react-icons/md";
-import { useLanguageStore } from "../../stores/languageStore";
-import { SectionHeader } from "../SectionHeader/SectionHeader";
-import { SectionDivider } from "../SectionDivider/SectionDivider";
+import { SectionDivider } from "../../../../../components/SectionDivider/SectionDivider";
+import { SectionHeader } from "../../../../../components/SectionHeader/SectionHeader";
+import { useLanguageStore } from "../../../../../stores/languageStore";
 
 interface MethodologyStep {
   id: number;
@@ -54,12 +54,30 @@ export const ProcessSection = () => {
   const { t } = useLanguageStore();
 
   const steps = [
-    { title: t.methodology.steps.step1Title, description: t.methodology.steps.step1Desc },
-    { title: t.methodology.steps.step2Title, description: t.methodology.steps.step2Desc },
-    { title: t.methodology.steps.step3Title, description: t.methodology.steps.step3Desc },
-    { title: t.methodology.steps.step4Title, description: t.methodology.steps.step4Desc },
-    { title: t.methodology.steps.step5Title, description: t.methodology.steps.step5Desc },
-    { title: t.methodology.steps.step6Title, description: t.methodology.steps.step6Desc },
+    {
+      title: t.methodology.steps.step1Title,
+      description: t.methodology.steps.step1Desc,
+    },
+    {
+      title: t.methodology.steps.step2Title,
+      description: t.methodology.steps.step2Desc,
+    },
+    {
+      title: t.methodology.steps.step3Title,
+      description: t.methodology.steps.step3Desc,
+    },
+    {
+      title: t.methodology.steps.step4Title,
+      description: t.methodology.steps.step4Desc,
+    },
+    {
+      title: t.methodology.steps.step5Title,
+      description: t.methodology.steps.step5Desc,
+    },
+    {
+      title: t.methodology.steps.step6Title,
+      description: t.methodology.steps.step6Desc,
+    },
   ];
 
   return (

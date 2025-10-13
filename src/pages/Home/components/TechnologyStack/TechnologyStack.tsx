@@ -18,11 +18,7 @@ import {
   SiWordpress,
   SiZod,
 } from "react-icons/si";
-
-import {
-  ThreeDScrollTriggerContainer,
-  ThreeDScrollTriggerRow,
-} from "../lightswind/3d-scroll-trigger";
+import { ThreeDScrollTriggerContainer, ThreeDScrollTriggerRow } from "../../../../components/lightswind/3d-scroll-trigger";
 
 type TechnologyItem = {
   name: string;

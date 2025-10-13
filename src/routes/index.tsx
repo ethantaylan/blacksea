@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import AboutUs from "../pages/AboutUs";
-import Home from "../pages/Home";
-import Works from "../pages/Works";
-import NotFound from "../pages/NotFound";
+import AboutUs from "../pages/AboutUs/AboutUs";
+import Home from "../pages/Home/Home";
+import NotFound from "../pages/Home/NotFound";
+import Works from "../pages/Works/Works";
 
 export default function ApplicationRoutes() {
   return (

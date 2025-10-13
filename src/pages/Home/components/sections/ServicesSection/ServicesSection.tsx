@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { useLanguageStore } from "../../stores/languageStore";
-import { SectionHeader } from "../SectionHeader/SectionHeader";
-import { services } from "../../consts";
-import { AccordionItem } from "../AccordionItem/AccordionItem";
+import { AccordionItem } from "../../../../../components/AccordionItem/AccordionItem";
+import { SectionHeader } from "../../../../../components/SectionHeader/SectionHeader";
+import { services } from "../../../../../consts";
+import { useLanguageStore } from "../../../../../stores/languageStore";
 
 export function ServicesSection() {
   const { t } = useLanguageStore();

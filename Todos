@@ -1,0 +1,8 @@
+make translation keys for project detail -> category
+modal is taking too much space, reduce size in height
+
+make a single component for project filters, (use PortfolioSection.tsx) use this filters in home.tsx
+in hero of home page, add shadow on the contact button
+
+
+
