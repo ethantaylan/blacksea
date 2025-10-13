@@ -33,7 +33,7 @@ export default function Works() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <motion.section
-        className="relative min-h-screen flex items-end overflow-hidden bg-white pt-32 pb-20"
+        className="relative min-h-screen flex items-center overflow-hidden bg-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}

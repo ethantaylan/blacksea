@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { DotBackground } from "../../../../components/DotBackground/DotBackground";
+import { useContact } from "../../../../contexts/ContactContext";
 import { useLanguage } from "../../../../contexts/LanguageContext";
 
 export function Hero() {
   const navigate = useNavigate();
   const { t } = useLanguage();
+  const { openContact } = useContact();
 
   return (
     <motion.section
@@ -51,6 +53,7 @@ export function Hero() {
             className="btn w-full sm:w-56 btn-lg btn-primary rounded-full mt-8"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={openContact}
           >
             {t.hero.contactBtn} <MdOutlineArrowOutward size={22} />
           </motion.button>

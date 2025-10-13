@@ -12,8 +12,18 @@ export function Collapse({ content, title }: CollapseProps) {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   return (
-    <div onClick={() => setIsChecked(!isChecked)}>
-      <div className="flex justify-between text-5xl cursor-pointer">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      onClick={() => setIsChecked(!isChecked)}
+    >
+      <motion.div
+        className="flex justify-between text-5xl cursor-pointer"
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.2 }}
+      >
         <p>{title}</p>
 
         <motion.div
@@ -22,7 +32,7 @@ export function Collapse({ content, title }: CollapseProps) {
         >
           <MdOutlineArrowDownward />
         </motion.div>
-      </div>
+      </motion.div>
       <AnimatePresence>
         {isChecked && (
           <motion.div
@@ -40,6 +50,6 @@ export function Collapse({ content, title }: CollapseProps) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

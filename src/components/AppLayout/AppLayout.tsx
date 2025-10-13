@@ -1,12 +1,12 @@
-import { useState } from "react";
 import ApplicationRoutes from "../../routes";
+import { useContact } from "../../contexts/ContactContext";
 import { ContactPopup } from "../ContactPopup/ContactPopup";
 import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import { ScrollToTop } from "../ScrollToTop/ScrollToTop";
 
 export default function AppLayout() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  const { isContactOpen, openContact, closeContact } = useContact();
 
   return (
     <>
@@ -16,10 +16,10 @@ export default function AppLayout() {
 
         <ApplicationRoutes />
       </main>
-      <Footer onContactClick={() => setIsContactOpen(true)} />
+      <Footer onContactClick={openContact} />
       <ContactPopup
         isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
+        onClose={closeContact}
       />
     </>
   );
