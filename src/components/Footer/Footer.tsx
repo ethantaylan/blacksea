@@ -2,14 +2,14 @@
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { socials } from "../../consts";
-import { useLanguage } from "../../contexts/LanguageContext";
+import { useLanguageStore } from "../../stores/languageStore";
 
 interface FooterProps {
   onContactClick: () => void;
 }
 
 export function Footer({ onContactClick }: FooterProps) {
-  const { t } = useLanguage();
+  const { t } = useLanguageStore();
 
   return (
     <footer className="bg-black h-auto md:h-[400px] text-white pt-12 md:pt-20 pb-4 px-4 md:px-0 items-center flex flex-col justify-between">

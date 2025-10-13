@@ -164,6 +164,14 @@ export const en: Translations = {
     messagePlaceholder: "Tell us about your project...",
     sendBtn: "Send message",
     joinUs: "Join us",
+    validation: {
+      nameMin: "Name must be at least 2 characters",
+      nameMax: "Name cannot exceed 100 characters",
+      emailInvalid: "Please enter a valid email address",
+      emailRequired: "Email is required",
+      messageMin: "Message must be at least 10 characters",
+      messageMax: "Message cannot exceed 1000 characters",
+    },
   },
   aboutUs: {
     hero: {

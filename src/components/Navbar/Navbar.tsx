@@ -2,14 +2,15 @@ import { Mail, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useLanguage } from "../../contexts/LanguageContext";
+import { useContactStore } from "../../stores/contactStore";
+import { useLanguageStore } from "../../stores/languageStore";
 import { Language } from "../../translations";
 import { ContactPopup } from "../ContactPopup/ContactPopup";
 
 export function Navbar() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, language, setLanguage } = useLanguage();
+  const { t, language, setLanguage } = useLanguageStore();
+  const { isOpen: isContactOpen, openContact, closeContact } = useContactStore();
 
   return (
     <div className="flex justify-center relative">
@@ -25,7 +26,7 @@ export function Navbar() {
           {/* Contact Button */}
           <button
             className="p-2.5 md:p-3 bg-black text-white rounded-full cursor-pointer hover:scale-105 transition-transform"
-            onClick={() => setIsContactOpen(true)}
+            onClick={openContact}
             aria-label="Contact"
           >
             <Mail size={20} className="md:w-5 md:h-5" />
@@ -154,7 +155,7 @@ export function Navbar() {
       {/* Contact Popup */}
       <ContactPopup
         isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
+        onClose={closeContact}
       />
     </div>
   );

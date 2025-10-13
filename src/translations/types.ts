@@ -111,6 +111,14 @@ export interface Translations {
     messagePlaceholder: string;
     sendBtn: string;
     joinUs: string;
+    validation: {
+      nameMin: string;
+      nameMax: string;
+      emailInvalid: string;
+      emailRequired: string;
+      messageMin: string;
+      messageMax: string;
+    };
   };
   aboutUs: {
     hero: {

@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap");
-@font-face {
-  font-family: "Birds";
-  src: url("./assets/fonts/birds.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: lofi --default, dark --prefersdark;
@@ -14,30 +8,11 @@
   font-family: "Wix Madefor Text", sans-serif;
 }
 
-.bird {
-  font-family: "Birds", sans-serif !important;
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.embla {
-  overflow: hidden;
-}
-
-.embla__container {
-  display: flex;
-}
-
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-
-@keyframes blink {
-  0%,
-  49% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

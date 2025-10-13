@@ -1,12 +1,12 @@
 import ApplicationRoutes from "../../routes";
-import { useContact } from "../../contexts/ContactContext";
+import { useContactStore } from "../../stores/contactStore";
 import { ContactPopup } from "../ContactPopup/ContactPopup";
 import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import { ScrollToTop } from "../ScrollToTop/ScrollToTop";
 
 export default function AppLayout() {
-  const { isContactOpen, openContact, closeContact } = useContact();
+  const { isOpen, openContact, closeContact } = useContactStore();
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function AppLayout() {
       </main>
       <Footer onContactClick={openContact} />
       <ContactPopup
-        isOpen={isContactOpen}
+        isOpen={isOpen}
         onClose={closeContact}
       />
     </>

@@ -164,6 +164,14 @@ export const fr: Translations = {
     messagePlaceholder: "Parlez-nous de votre projet...",
     sendBtn: "Envoyer le message",
     joinUs: "Rejoignez-nous",
+    validation: {
+      nameMin: "Le nom doit contenir au moins 2 caractères",
+      nameMax: "Le nom ne peut pas dépasser 100 caractères",
+      emailInvalid: "Veuillez entrer une adresse email valide",
+      emailRequired: "L'email est requis",
+      messageMin: "Le message doit contenir au moins 10 caractères",
+      messageMax: "Le message ne peut pas dépasser 1000 caractères",
+    },
   },
   aboutUs: {
     hero: {
