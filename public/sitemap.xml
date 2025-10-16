@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://blacksea.agency/</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blacksea.agency/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://blacksea.agency/" />
+  </url>
+
+  <!-- Works Page -->
+  <url>
+    <loc>https://blacksea.agency/works</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blacksea.agency/works" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://blacksea.agency/works" />
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://blacksea.agency/about</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blacksea.agency/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://blacksea.agency/about" />
+  </url>
+
+</urlset>

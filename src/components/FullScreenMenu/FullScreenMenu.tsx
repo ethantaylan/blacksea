@@ -102,7 +102,7 @@ export const FullScreenMenu = ({
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
-                🇫🇷 FR
+                FR
               </button>
               <button
                 onClick={() => setLanguage(Language.EN)}
@@ -112,7 +112,7 @@ export const FullScreenMenu = ({
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
-                🇬🇧 EN
+                EN
               </button>
             </div>
           </motion.div>

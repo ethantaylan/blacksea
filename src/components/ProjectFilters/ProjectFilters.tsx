@@ -6,7 +6,7 @@ interface ProjectFiltersProps {
   onCategoryChange: (category: string) => void;
 }
 
-export const ProjectFilters = ({ selectedCategory, onCategoryChange }: ProjectFiltersProps) => {
+export const ProjectFilters = ({ onCategoryChange }: ProjectFiltersProps) => {
   const { t } = useLanguageStore();
 
   const categories = [

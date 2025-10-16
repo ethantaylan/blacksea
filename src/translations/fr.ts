@@ -231,4 +231,25 @@ export const fr: Translations = {
         "Donner aux entreprises les moyens d'agir avec des solutions digitales innovantes qui non seulement atteignent leurs objectifs mais dépassent leurs attentes, créant un impact durable dans le monde numérique.",
     },
   },
+  seo: {
+    home: {
+      title: "BLACKSEA | Agence Web Digitale - Développement Web & Design Expert",
+      description: "BLACKSEA est une agence web digitale de pointe spécialisée dans le développement web moderne, le design UI/UX et les solutions digitales. Transformez votre présence numérique avec notre équipe d'experts.",
+      keywords: "agence web, agence digitale, développement web, design UI UX, web design, solutions digitales, sites web modernes, développement react, applications web personnalisées",
+    },
+    works: {
+      title: "Nos Réalisations | BLACKSEA Agence Digitale - Portfolio & Études de Cas",
+      description: "Explorez le portfolio de BLACKSEA avec des projets de développement web innovants, des solutions digitales et des designs créatifs. Découvrez comment nous aidons les entreprises à transformer leur présence numérique.",
+      keywords: "portfolio, portfolio design web, projets agence digitale, études de cas, exemples développement web, portfolio UI UX, projets clients",
+    },
+    about: {
+      title: "À Propos | BLACKSEA Agence Digitale - Notre Histoire & Valeurs",
+      description: "Découvrez la mission, les valeurs et l'équipe de BLACKSEA Agence Digitale. Apprenez comment nous combinons créativité et technologie pour offrir des solutions digitales exceptionnelles.",
+      keywords: "à propos, équipe agence digitale, histoire agence web, valeurs entreprise, équipe développement web, agence créative",
+    },
+    notFound: {
+      title: "404 - Page Non Trouvée | BLACKSEA Agence Digitale",
+      description: "La page que vous recherchez n'existe pas. Retournez à la page d'accueil de BLACKSEA Agence Digitale pour explorer nos services et portfolio.",
+    },
+  },
 };

@@ -12,7 +12,7 @@ export function Footer({ onContactClick }: FooterProps) {
   const { t } = useLanguageStore();
 
   return (
-    <footer className="bg-black h-auto md:h-[400px] text-white pt-12 md:pt-20 pb-4 px-4 md:px-0 items-center flex flex-col justify-between">
+    <footer className="bg-black h-auto md:h-[400px] text-white pt-12 md:pt-20 pb-4 px-4 md:px-0 items-center flex flex-col justify-between" role="contentinfo">
       <div className="container flex flex-col md:flex-row justify-between gap-8 md:gap-0">
         <div className="w-full">
           <motion.h2
@@ -29,12 +29,13 @@ export function Footer({ onContactClick }: FooterProps) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onContactClick}
+            aria-label="Open contact form"
           >
-            {t.footer.contactBtn} <MdOutlineArrowOutward size={22} />
+            {t.footer.contactBtn} <MdOutlineArrowOutward size={22} aria-hidden="true" />
           </motion.button>
         </div>
 
-        <div className="space-y-3 md:space-y-4">
+        <nav className="space-y-3 md:space-y-4" aria-label="Social media links">
           {socials.map((item) => (
             <motion.a
               key={item.name}
@@ -44,11 +45,12 @@ export function Footer({ onContactClick }: FooterProps) {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               className="flex justify-between md:w-40 items-center gap-2 hover:gap-4 transition-all hover:text-gray-300 text-sm md:text-base"
+              aria-label={`Visit our ${item.name} page`}
             >
-              {item.name} <MdOutlineArrowOutward />
+              {item.name} <MdOutlineArrowOutward aria-hidden="true" />
             </motion.a>
           ))}
-        </div>
+        </nav>
       </div>
 
       <div className="mt-12 md:mt-20">

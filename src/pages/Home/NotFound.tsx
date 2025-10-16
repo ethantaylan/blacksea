@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { SEO } from "../../components/SEO/SEO";
 import { DotBackground } from "../../components/DotBackground/DotBackground";
 import { useLanguageStore } from "../../stores/languageStore";
 
@@ -9,12 +10,18 @@ export default function NotFound() {
   const { t } = useLanguageStore();
 
   return (
-    <motion.section
-      className="relative min-h-screen flex items-center overflow-hidden bg-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <>
+      <SEO
+        title={t.seo.notFound.title}
+        description={t.seo.notFound.description}
+      />
+      <motion.section
+        className="relative min-h-screen flex items-center overflow-hidden bg-white"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        aria-label="404 Page not found"
+      >
       <DotBackground />
 
       <div className="relative z-10 px-4 md:px-8 max-w-7xl mx-auto w-full text-center">
@@ -66,14 +73,16 @@ export default function NotFound() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate("/")}
+              aria-label="Go to homepage"
             >
-              {t.common.home} <MdOutlineArrowOutward size={22} />
+              {t.common.home} <MdOutlineArrowOutward size={22} aria-hidden="true" />
             </motion.button>
             <motion.button
               className="btn w-full sm:w-56 btn-lg rounded-full"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate(-1)}
+              aria-label="Go back to previous page"
             >
               {t.common.home === "Home" ? "Go Back" : "Retour"}
             </motion.button>
@@ -81,5 +90,6 @@ export default function NotFound() {
         </motion.div>
       </div>
     </motion.section>
+    </>
   );
 }

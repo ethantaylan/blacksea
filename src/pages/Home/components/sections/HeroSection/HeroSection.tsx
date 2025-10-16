@@ -16,6 +16,7 @@ export function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
+      aria-label="Hero section"
     >
       <DotBackground />
       <motion.div
@@ -47,20 +48,24 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+          role="group"
+          aria-label="Call to action buttons"
         >
           <motion.button
             className="btn w-full sm:w-56 btn-lg btn-primary rounded-full mt-8 shadow-2xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={openContact}
+            aria-label="Contact us"
           >
-            {t.hero.contactBtn} <MdOutlineArrowOutward size={22} />
+            {t.hero.contactBtn} <MdOutlineArrowOutward size={22} aria-hidden="true" />
           </motion.button>
           <motion.button
             className="btn w-full sm:w-56 btn-lg rounded-full mt-8"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/works")}
+            aria-label="View our works"
           >
             {t.hero.worksBtn}
           </motion.button>

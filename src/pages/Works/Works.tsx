@@ -2,17 +2,25 @@
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useState } from "react";
+import { SEO } from "../../components/SEO/SEO";
 import { Project } from "../../models";
+import { useLanguageStore } from "../../stores/languageStore";
 import { ProjectDetails } from "./components/ProjectDetails/ProjectDetails";
 import { ProjectImage } from "./components/ProjectImage/ProjectImage";
 import { FilterSection } from "./components/sections/FilterSection/FilterSection";
 import { HeroSection } from "./components/sections/HeroSection/HeroSection";
 
 export default function Works() {
+  const { t } = useLanguageStore();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title={t.seo.works.title}
+        description={t.seo.works.description}
+        keywords={t.seo.works.keywords}
+      />
       {/* Hero Section */}
 
       <HeroSection />
@@ -30,6 +38,9 @@ export default function Works() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setSelectedProject(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="project-title"
         >
           <div className="min-h-screen flex items-center justify-center p-4 py-8">
             <motion.div
@@ -43,8 +54,9 @@ export default function Works() {
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute cursor-pointer top-4 right-4 z-10 p-3 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+                aria-label="Close project details"
               >
-                <X />
+                <X aria-hidden="true" />
               </button>
 
               {/* Project Image */}

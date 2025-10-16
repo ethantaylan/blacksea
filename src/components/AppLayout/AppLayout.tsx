@@ -11,9 +11,8 @@ export default function AppLayout() {
   return (
     <>
       <ScrollToTop />
-      <main className="container mx-auto p-4">
-        <Navbar />
-
+      <Navbar />
+      <main id="main-content" className="container mx-auto p-4" role="main">
         <ApplicationRoutes />
       </main>
       <Footer onContactClick={openContact} />

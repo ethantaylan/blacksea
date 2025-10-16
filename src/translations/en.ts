@@ -231,4 +231,25 @@ export const en: Translations = {
         "To empower businesses with innovative digital solutions that not only meet their goals but exceed their expectations, creating lasting impact in the digital world.",
     },
   },
+  seo: {
+    home: {
+      title: "BLACKSEA | Digital Web Agency - Expert Web Development & Design",
+      description: "BLACKSEA is a cutting-edge digital web agency specializing in modern web development, UI/UX design, and digital solutions. Transform your digital presence with our expert team.",
+      keywords: "web agency, digital agency, web development, UI UX design, web design, digital solutions, modern websites, react development, custom web applications",
+    },
+    works: {
+      title: "Our Works | BLACKSEA Digital Agency - Portfolio & Case Studies",
+      description: "Explore BLACKSEA's portfolio of cutting-edge web development projects, digital solutions, and creative designs. See how we help businesses transform their digital presence.",
+      keywords: "portfolio, web design portfolio, digital agency projects, case studies, web development examples, UI UX portfolio, client projects",
+    },
+    about: {
+      title: "About Us | BLACKSEA Digital Agency - Our Story & Values",
+      description: "Learn about BLACKSEA Digital Agency's mission, values, and team. Discover how we combine creativity and technology to deliver exceptional digital solutions.",
+      keywords: "about us, digital agency team, web agency story, company values, web development team, creative agency",
+    },
+    notFound: {
+      title: "404 - Page Not Found | BLACKSEA Digital Agency",
+      description: "The page you are looking for doesn't exist. Return to BLACKSEA Digital Agency homepage to explore our services and portfolio.",
+    },
+  },
 };

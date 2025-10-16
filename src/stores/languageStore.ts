@@ -18,8 +18,11 @@ export const useLanguageStore = create<LanguageState>()(
     (set) => ({
       language: Language.FR,
       t: translations[Language.FR],
-      setLanguage: (lang: Language) =>
-        set({ language: lang, t: translations[lang] }),
+      setLanguage: (lang: Language) => {
+        set({ language: lang, t: translations[lang] });
+        // Update HTML lang attribute for accessibility and SEO
+        document.documentElement.lang = lang === Language.FR ? 'fr' : 'en';
+      },
     }),
     {
       name: 'blacksea-language',

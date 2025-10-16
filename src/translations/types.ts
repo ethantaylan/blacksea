@@ -169,4 +169,25 @@ export interface Translations {
       description: string;
     };
   };
+  seo: {
+    home: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    works: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    about: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    notFound: {
+      title: string;
+      description: string;
+    };
+  };
 }
